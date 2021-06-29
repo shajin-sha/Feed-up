@@ -1,0 +1,71 @@
+.addObj{
+    position:relative;
+    top:90px;
+    width: 100%;
+}
+
+.addTo{
+    position: relative;
+    transition: all 400ms ease-in-out;
+    top:5px;
+    /* top:-500px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(90, 127, 230);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    animation-name: openTo;
+    animation-duration: 450ms;
+}
+
+
+
+
+@keyframes openTo{
+    0%{
+        top:-550px;
+    }
+    100%{
+        top:5px;
+    }
+}
+
+
+
+
+.addTo button{
+    transition: all 150ms ease-in-out;
+    width:100%;
+    background: transparent;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+
+}
+
+
+
+.inputs{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 3%;
+
+} 
+
+
+.inputs input{
+    margin-top: 5%;
+
+} 

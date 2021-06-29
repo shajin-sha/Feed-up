@@ -1,0 +1,15 @@
+.feedTextH1{
+    color: rgb(49, 49, 49);
+  max-width: 99%;
+    text-align: left;
+    margin-left: 2%;
+    font-size: 1.6rem;
+    color: rgb(97, 97, 97);
+}
+
+.feedTextH1::first-letter{
+    color: rgba(5, 60, 211, 0.616);
+    font-size: 3rem;
+}
+
+ 

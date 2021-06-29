@@ -1,3 +1,26 @@
 .feedCard{
-    
+    position: relative;
+    top: 140px;
+    height:max-content;
+    width: 56%;
+    left:0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
+    background: #fff;
+    padding-bottom: 6%;
+
+    box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
+-webkit-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
+-moz-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
+margin-top: 5%;
+}
+
+
+.feedCard hr{
+    position:absolute;
+    bottom: -3%;
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.075);
+    background: rgba(0, 0, 0, 0.014);
 }

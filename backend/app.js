@@ -7,6 +7,11 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/signup');
 var findRouter = require('./routes/signin');
+var feedRouter = require('./routes/Feed');
+var FeedsRouter = require('./routes/Feeds');
+var LikeRouter = require('./routes/like');
+
+var UploadImg = require('./routes/uploadImg');
 
 var app = express();
 
@@ -23,13 +28,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/find', findRouter);
+app.use('/feed', feedRouter);
+app.use('/feeds', FeedsRouter);
+app.use('/like', LikeRouter);
+app.use('/img', UploadImg);
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
 
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
