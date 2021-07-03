@@ -1,0 +1,42 @@
+.welcomeContentText{
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: rgb(73, 72, 72);
+}
+
+.welcomeContentText .span{
+    color: #536DFE;
+}
+.welcomesvg{
+    width: 40%;
+}
+
+.btnPR{
+    border: none;
+    background:#536DFE; 
+    color: #fff;
+    font-size:1.3em;
+    width: 20%;
+    padding: 0.9%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+}
+
+
+.btnPR:hover{
+    background:#4963f5; 
+}
+
+.link a{
+text-decoration: none;
+font-size: 1rem;
+color: #85868d;;
+}
+
+.link{
+position:absolute;
+bottom: 2%;
+left:2%;
+}

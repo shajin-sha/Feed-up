@@ -10,13 +10,13 @@ export default function Signup(props) {
 
     const [UserName, setUserName] = useState("")
     const [Password, setPassword] = useState("")
-    const [Err,setErr]=useState(false)
-    const [ErrText,setErrText]=useState("")
+    const [Err, setErr] = useState(false)
+    const [ErrText, setErrText] = useState("")
     return (
         <div>
 
-            <form onChangeCapture={()=>{
-                    setErr(false)
+            <form onChangeCapture={() => {
+                setErr(false)
             }} className="Si" onSubmit={(e) => {
                 e.preventDefault()
 
@@ -34,10 +34,18 @@ export default function Signup(props) {
 
                     }
                     else {
-                        console.log(res.data)
-                        JSON.stringify(localStorage.setItem("user_id",res.data._id))
-                        JSON.stringify(localStorage.setItem("userName",res.data.userName))
-                        props.GoToNextPage("/Home")
+                        JSON.stringify(localStorage.setItem("user_id", res.data._id))
+                        JSON.stringify(localStorage.setItem("userName", res.data.userName))
+                        JSON.stringify(localStorage.setItem("dp", res.data.Dp))
+                        JSON.stringify(localStorage.setItem("bio", res.data.Bio))
+
+                        if(res.data.profileUpdated === "true"){
+                            props.GoToNextPage("/Home")
+                        }
+                        else{
+                            props.GoToNextPage("/setup")
+                        }
+
                     }
                 })
 
@@ -58,7 +66,7 @@ export default function Signup(props) {
 
 
                 <input onChange={(e) => {
-                
+
                     setUserName(e.target.value)
 
                 }}
@@ -68,7 +76,7 @@ export default function Signup(props) {
                     id="UserName"
                     required
                 />
-                <p className={Err ? "wring":"wringFalse"} >incorrect password or username</p>
+                <p className={Err ? "wring" : "wringFalse"} >incorrect password or username</p>
                 <input onChange={(e) => {
                     setPassword(e.target.value)
 

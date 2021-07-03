@@ -2,6 +2,9 @@ import React, { Fragment, useState } from 'react'
 import './Add.css'
 import AddImg from './AddImg/AddImg'
 import AddText from './AddText/AddText'
+import photos from "./photo_camera_black_24dp.svg"
+import videoCam from "./videocam_black_24dp (1).svg"
+import feedBlack from "./feed_black_24dp.svg"
 
 export default function Add() {
     const [BorderTo, setBorderTo] = useState("")
@@ -15,19 +18,30 @@ export default function Add() {
                     setBorderTo("addimg")
                 }} style={{
                     borderBottom: BorderTo === "addimg" ? "4px solid #fff" : "4px solid #ffffff00"
-                }} >Feed img</button>
-                <button style={{
+                }} >
+
+                <img src={photos} alt=""/>
+                {/* <h4>/</h4> */}
+                <img src={videoCam} alt=""/>
+                
+                </button>
+                {/* <button style={{
                     borderBottom: BorderTo === "addvideo" ? "4px solid #fff" : "4px solid #ffffff00"
                 }} onClick={() => {
                     setOpen("")
                     setBorderTo("addvideo")
-                }} >Fed video</button>
+                }} >Fed video
+
+                <img src={videoCam} alt=""/>
+                </button> */}
                 <button style={{
                     borderBottom: BorderTo === "addtext" ? "4px solid #fff" : "4px solid #ffffff00"
                 }} onClick={() => {
                     setOpen("Text")
                     setBorderTo("addtext")
-                }} >Feed Text</button>
+                }} >
+                <img src={feedBlack} alt=""/>
+                </button>
             </div>
             </div>
 

@@ -12,6 +12,7 @@ var FeedsRouter = require('./routes/Feeds');
 var LikeRouter = require('./routes/like');
 
 var UploadImg = require('./routes/uploadImg');
+var UpdateUser = require('./routes/updateUser');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/feed', feedRouter);
 app.use('/feeds', FeedsRouter);
 app.use('/like', LikeRouter);
 app.use('/img', UploadImg);
+app.use('/updateuser', UpdateUser);
 
 app.use(function (req, res, next) {
   next(createError(404));

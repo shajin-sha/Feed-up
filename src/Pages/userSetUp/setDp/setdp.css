@@ -1,0 +1,21 @@
+.userDpIMG{
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+}
+
+.addDp{
+    position:relative;
+    width: 2rem;
+    padding: 0.5%;
+    border-radius: 50%;
+    right:4%;
+    bottom: 10px;
+    cursor: pointer;
+    background: rgb(226, 225, 225);
+}
+
+
+.addDp:hover{
+    background: rgb(172, 168, 168);
+}

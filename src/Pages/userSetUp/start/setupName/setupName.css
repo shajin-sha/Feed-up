@@ -1,0 +1,56 @@
+.YourName{
+    font-size: 2rem;
+    color:rgb(65, 62, 62);
+    font-weight: 800;
+}
+
+.infoVi{
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.biosvg{
+    width: 26%;
+}
+
+.YourNameIN{
+    transition: all 300ms ease-in-out;
+    border: none;
+    padding: 2%;
+    width: 50%;
+    border-bottom: 2px solid rgb(58, 56, 56);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: rgb(39, 38, 38);
+    font-weight: 900;
+    background: transparent;
+}
+
+
+
+
+.YourNameIN:focus{
+    border-bottom: 2px solid rgb(21, 123, 207);
+    width: 60%;
+}
+
+.setName{
+    position:absolute;
+    bottom: 3%;
+    right: 3%;
+    border: none;
+    width: 14%;
+    background:#4235f5; 
+    padding: 0.9%;
+    font-size: 1.3rem;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.setName:hover{
+    background:#3b2ef1; 
+}

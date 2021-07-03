@@ -24,7 +24,8 @@ export default function Signin() {
                     {
                         "userName": UserName,
                         "password": Password,
-                        "email":Email
+                        "email":Email,
+                        "profileUpdated":false,
 
                     }
                 ]

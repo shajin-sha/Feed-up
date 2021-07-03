@@ -19,7 +19,7 @@
 
 .AddText{
     position: relative;
-    background: rgb(241, 241, 241);
+    background: rgb(255, 255, 255);
     top: 150px;
     left:0;
     right: 0;
@@ -27,9 +27,22 @@
     width: 90%;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-
+    animation-name: ADDTextAnim;
+    animation-duration: 509ms;
 }
+
+
+@keyframes ADDTextAnim{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
 
 .AddText input{
     padding: 0.5%;
@@ -69,8 +82,8 @@
 .send{
     position:fixed;
     bottom: 10%;
-    margin-left: 5%;
-    background: rgba(19, 115, 241, 0.705);
+    right: 3%;
+    background: rgb(87, 85, 85);
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -80,5 +93,5 @@
 }
 
 .send:hover{
-    background: rgba(19, 115, 241, 0.924);
+    background: rgba(13, 13, 14, 0.781);
 }

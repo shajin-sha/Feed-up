@@ -48,7 +48,11 @@ router.post('/', upload.single("Img"), function (req, res, next) {
                 feedby:req.body.feedby,
                 likes:0,
                 comments:0,
-                likedUsers:[]
+                likedUsers:[],
+                key:dateNow,
+                dateSt:req.body.dateSt,
+                feedUserDp:req.body.dp,
+                type:req.body.type
 
             }    
             client.db("feed_app").collection("Feed").insertOne(data).then(()=>{

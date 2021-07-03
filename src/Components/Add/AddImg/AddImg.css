@@ -1,18 +1,31 @@
 .img{
-    top:25%;
+    top:29%;
     position:absolute;
-    background: red;
+    background: rgb(230, 229, 229);
     width: 100%;
-    height: 75%;
+    height: 71%;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
+
+
+@keyframes imgANim{
+    0%{
+    bottom: -20%;
+}
+    100%{
+        bottom:10%;
+    }
+}
+
+
 
 
 .img .from{
     position: absolute;
     background: rgb(255, 255, 255);
-    bottom: 0%;
+    bottom: 10%;
     width: 100%;
     height: 20%;
     display: flex;
@@ -20,6 +33,9 @@
     align-items: center;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    animation-name: imgANim;
+    animation-duration: 209ms;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.089);
 }
 
 
@@ -75,3 +91,30 @@
     font-size: 1.2rem;
 
 }
+
+.filePERV{
+    width: 100%;
+    height: auto;
+}
+
+
+.filePERVVi{
+    width: 60%;
+    height: auto;
+    border-radius: 6px;
+
+
+
+}
+
+
+
+@media (min-width:300px) and (max-width:640px){ 
+
+    .captions{
+        margin-right: 2%;
+        width: 50%;
+    }
+    
+}
+

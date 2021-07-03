@@ -9,18 +9,41 @@
     border-radius: 5px;
     background: #fff;
     padding-bottom: 6%;
+    min-height: 150px;
 
     box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
--webkit-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
--moz-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
-margin-top: 5%;
+    -webkit-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
+    -moz-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
+    margin-top: 1%;
 }
 
 
-.feedCard hr{
-    position:absolute;
-    bottom: -3%;
-    width: 100%;
-    border-color: rgba(0, 0, 0, 0.075);
-    background: rgba(0, 0, 0, 0.014);
+.feedCardH{
+    visibility: collapse;
+
+
+}
+
+
+
+
+@media (min-width:370px) and (max-width:995px){ 
+
+    .feedCard{
+        width: 95%;
+        padding-bottom: 10%;
+    
+    }
+    
+
+}
+
+@media (min-width:220px) and (max-width:360px){ 
+
+    .feedCard{
+        width: 100%;
+        padding-bottom: 10%;
+    
+    }
+
 }

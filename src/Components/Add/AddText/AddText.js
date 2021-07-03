@@ -8,19 +8,32 @@ export default function AddText() {
 
     const [Title, setTitle] = useState("")
     const [FeedContent, setFeedContent] = useState("")
+
+
+    let date = new Date()
+
+    const dateNow = date.getTime()
+
+
+
+    const yourDate = new Date()
+
+
     return (
         <div className="AddText" >
             <form onSubmit={(e)=>{
                 e.preventDefault()
 
-                var data =[
+                var data = [
                     {
                         title:Title,
                         feed:FeedContent,
                         feedby:localStorage.getItem("userName"),
-                        key:Date.now().toString(),
+                        feedUserDp:localStorage.getItem("dp"),
+                        key:dateNow,
                         likes:0,
                         comments:0,
+                        dateSt:yourDate.toISOString().split('T')[0],
                         likedUsers:[]
 
                     }
@@ -40,7 +53,7 @@ export default function AddText() {
 
                 <textarea onChange={(e) => {
                     setFeedContent(e.target.value)
-                }} placeholder="your feed" cols="10" rows="1"></textarea>
+                }} placeholder="your feed" cols="10" rows="5"></textarea>
 
 
                 <button type="submit" className="send" >

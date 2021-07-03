@@ -3,11 +3,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.055);
 
 }
 
 
-.feedby img{
+.feedby .userIMg{
     width: 2.3rem;
     height: 2.3rem;
     border-radius: 50%;
@@ -15,7 +16,7 @@
     margin-left: 2%;
 }
 
-.feedby h3{
+.feedby .userName{
     margin-left: 4%;
 }
 
@@ -24,4 +25,5 @@
     position: relative;
     text-align: left;
     left:2%;
+    color: rgb(187, 187, 187);
 }

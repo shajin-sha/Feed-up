@@ -1,0 +1,41 @@
+.navBottom{
+    position:fixed;
+    bottom: 0%;
+    height: 8%;
+    background: rgba(255, 255, 255, 0.918);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 1000000;
+}
+
+.navBottom div{
+    background: rgba(255, 255, 255, 0.726);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+.navBottom div:active{
+    background: rgb(255, 255, 255);
+}
+
+
+
+
+.navBottom .navBottomUser{
+    width: 2rem;
+    border-radius: 50%;
+    height: 2rem;
+}
+
+
+
+
+
+.navBottom .navBottomUser{
+    user-select: none;
+}

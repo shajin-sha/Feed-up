@@ -1,0 +1,331 @@
+.USER{
+    position:absolute;
+    width: 100%;
+    height: max-content;
+    top:0%;
+    left: 0%;
+    background: transparent;
+}
+
+.USER .USERContent{
+    position:absolute;
+    top: 13%;
+    height: 87%;
+    width: 100%;
+    animation-duration: 340ms;
+    animation-name: USERContent;
+}
+
+
+@keyframes USERContent{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+.userimg{
+    position:relative;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50% !important;
+}
+
+
+.userINFO{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addIMG{
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    width: 1.6em !important;
+    height: 1.6rem !important;
+    background: rgba(78, 73, 73, 0.212);
+    border-radius: 50%;
+    padding: 1.5%;
+    cursor:pointer;
+    margin-bottom: 2%;
+}
+
+.addIMG:active{
+    background: rgba(7, 6, 6, 0.397);
+}
+
+
+
+.USERIMGANDEDIT{
+    position: relative;
+    left: 0%;
+    top:96px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000 !important;
+    background: transparent;
+    /* background-image: url("http://localhost:3000/uploads/images/1624977399607undraw_welcoming_xvuq.svg"); */
+    /* background-image: url(https://backdrops.io/images/screens/screen5.jpg); */
+    background-size: cover;
+    /* background: red; */
+}
+
+.USERIMGANDEDIT .fade{
+    position:absolute;
+    width: 100%;
+    /* background: radial-gradient(rgba(32, 30, 30, 0.37),rgba(255, 255, 255, 0.103)); */
+    height: 100%;
+  
+}
+
+
+
+.imgdiv{
+    /* width: 0%;
+    position:relative;
+    left:0;
+    right: 0;
+    height: 0%;
+    bottom: 0; */
+
+    position: relative;
+    /* background: red; */
+    /* width: min-content; */
+    left:0;
+    right: 0;
+    bottom: 0;
+    top:-150px;
+    margin: auto;
+
+}
+
+
+.userNAME{
+position:relative;
+left:3%;
+max-width: 40%;
+font-size: 3rem;
+font-weight: 900;
+text-align: left;
+color: #2b2929;
+}
+
+
+.bio{
+position:relative;
+left:3%;
+top:30%;
+margin-top: 2%;
+max-width: 40%;
+font-size: 1rem;
+font-weight: 100;
+text-align: left;
+z-index: 1000000;
+color: #292828;
+
+}
+
+
+
+
+
+.folANDflos{
+    position:relative;
+    width: 41%;
+    left:-3%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1000000;
+
+
+}
+
+.folANDflos div{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(18, 89, 221, 0.904);
+    width: 30%;
+    margin-left: 2%;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    height: 45px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+#likedFeeds{
+    background: rgb(192, 191, 191);
+    color:black;
+    font-weight: 900;
+}
+#likedFeeds:active{
+    background: rgb(226, 226, 226);
+}
+
+
+
+
+
+
+
+.tabs{
+    top:90px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    z-index: 1200000;
+    height: 40px;
+
+}
+
+.tabs button{
+    width: 100%;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(131, 123, 123, 0.096);
+    border-top: none;
+    border-left: none;
+    border-right:  none;
+    cursor:pointer;
+    height: 100%;
+
+}
+
+
+
+
+input,
+textarea,
+button,
+select,
+img,
+video,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  outline: none;
+}
+
+
+
+
+@media (min-width:245px) and (max-width:600px){
+    
+    .userNAME{
+        font-size: 2rem;   
+    }
+    
+    
+    .userimg{
+        position:absolute;
+        width: 8rem;
+        height: 8rem;
+        right: 3%;
+    }
+    .USERIMGANDEDIT{
+        padding-bottom: 10%;
+    }   
+    
+
+
+
+    .folANDflos{
+        top:0px;
+        width: 60%;
+        left:0%;
+    
+    }
+
+    .folANDflos div{
+        width: 190px;
+        /* margin-left: %; */
+        font-size: 0.8rem;
+        height: 38px;
+    }
+
+
+    
+    #likedFeeds{
+        font-weight: 900;
+        width: 190px;
+        }
+    #likedFeeds:active{
+        background: rgb(216, 214, 214);
+    }
+    
+}
+
+
+.tabs button:active{
+    background: rgb(255, 255, 255);
+}
+
+
+.tabs button{
+    font-size: 0.9rem;
+}
+
+
+
+
+@media (min-width:500px) and (max-width:600px){ 
+
+    .userimg{
+        position:absolute;
+        width: 10rem;
+        height: 10rem;
+        right: 3%;
+    }
+
+
+}
+
+
+
+@media (min-width:600px) and (max-width:995px){ 
+
+
+
+    .folANDflos div{
+        width: 100%;
+        margin-left: 2%;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1rem;
+        height: 45px;
+        cursor: pointer;
+        margin-top: 2%;
+    }
+
+
+    
+
+.folANDflos{
+    top:200px;
+    width: 81%;
+    left:7%;
+}
+
+
+}
+
+
+
+
+
+
