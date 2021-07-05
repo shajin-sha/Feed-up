@@ -1,0 +1,44 @@
+.AddCommentsContent{
+    position:fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 9%;
+    /* background-color: rgb(231, 230, 230); */
+    background: rgb(219, 217, 217);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.AddComments{
+    width: 70%;
+    border: none;
+    padding: 1.8%;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.AddCommentsSend{
+    border: none;
+    padding: 1%;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.AddCommentsSend:active{
+    opacity: 75%;
+}

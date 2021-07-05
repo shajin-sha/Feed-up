@@ -71,7 +71,7 @@ export default function Signin() {
 
                 }}
                     placeholder="email"
-                    type="text"
+                    type="email"
                     id="email"
                     required
                 />

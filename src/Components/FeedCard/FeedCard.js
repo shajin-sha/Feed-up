@@ -27,65 +27,52 @@ export default function FeedCard(props) {
             })
         }
         else {
-            axios.post("/like", { key: key, like: -1 }).then((res) => {
+            axios.post("/like", { key: key, like: -1,user:localStorage.getItem("userName") }).then((res) => {
             })
         }
     }
-
-
-
-
     function openFullVideo(url){
         props.openFullVideo(url)
     }
 
 
 
+    function openComments(id,data){
+        props.openComment(id,data)
+    }
 
 
     return (
-
         <div>
-
             {Card.map((obj,index) => {
                 return (
-
                     <div className={ props.hidden ? "feedCardH":"feedCard"} >
                         <Feedby dp={`${process.env.PUBLIC_URL}/uploads/UserProfiles/` + `${obj.feedUserDp}`} date={"• "+obj.dateSt} name={obj.feedby} />
                         <FeddTextH1 text={obj.title} />
-
-                        {obj.likedUsers.map((obj) => {
-
+                        {obj.likedUsers.map((obj2) => {
                             return (
                                 <div>
-                                    {/* <h1>{obj.key}</h1> */}
-                                    {/* <p>{obj.userName === localStorage.getItem("userName") ? "yes" : null}</p> */}
-                                    <div>{obj.userName === localStorage.getItem("userName") ?  <FeedAction likes={obj.likes} default={true} id={obj.key} like={like} /> :null}</div>
-                                    <div>{obj.userName !==  localStorage.getItem("userName") ?<FeedAction likes={obj.likes} default={false} id={obj.key} like={like} /> :null}</div>
-                                    {/* <div>{obj === [] ?  :null}</div> */}
+
+
+                                    <div>{obj2.userName === localStorage.getItem("userName") ?  <FeedAction comment={obj.commentedUsers} openComments={openComments}  likes={obj2.likes} default={true} id={obj2.key} like={like} /> :null}</div>
+                                    <div>{obj2.userName !==  localStorage.getItem("userName") ?<FeedAction   comment={obj.commentedUsers} openComments={openComments} likes={obj2.likes} default={false} id={obj2.key} like={like} /> :null}</div>
+
+                                    
                                 </div>
                             )
                         })}
 
-
-
                         <FeedTextContent content={obj.feed} />
-                        {obj.likedUsers.length > 0 ? null: <FeedAction likes={obj.likes} id={obj.key} like={like} />}
+                        {obj.likedUsers.length > 0 ? null:  <FeedAction  comment={obj.commentedUsers} openComments={openComments}  likes={obj.likes} id={obj.key} like={like} />}
                         { obj.ImgName ? obj.type === "image/jpeg" &&  <FeedImg imgsrc={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
                         { obj.ImgName ? obj.type === "image/png" &&  <FeedImg imgsrc={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
                         { obj.ImgName ? obj.type === "image/svg+xml" &&  <FeedImg imgsrc={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
                         { obj.ImgName ? obj.type === "video/mp4" &&  <FeedVi url={obj.ImgName} openFullVideo={openFullVideo} video={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
                         {obj.caption ? <FeedImgCa caption={obj.caption} /> : null}
-
-
-                   
                     </div>
-
                 )
 
-
             })}
-
         </div>
 
 

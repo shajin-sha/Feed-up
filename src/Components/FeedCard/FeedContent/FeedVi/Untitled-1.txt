@@ -1,0 +1,1 @@
+db.Feed.update({key:"1625243575290"},{$pull:{"likedUsers":{userName:"shajin"}}}) 

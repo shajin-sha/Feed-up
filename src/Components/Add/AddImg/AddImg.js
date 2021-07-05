@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useEffect } from 'react'
+import React, { useState, Fragment} from 'react'
 import "./AddImg.css"
 import axios from "axios"
 import send from "./send_black_24dp.svg"
@@ -11,9 +11,6 @@ export default function AddImg() {
 
 
     let date = new Date()
-
-    const TimeNow = date.getTime()
-
     const dateX = new Date()
 
 

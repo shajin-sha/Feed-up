@@ -10,6 +10,7 @@ var findRouter = require('./routes/signin');
 var feedRouter = require('./routes/Feed');
 var FeedsRouter = require('./routes/Feeds');
 var LikeRouter = require('./routes/like');
+var Comments = require("./routes/Comments")
 
 var UploadImg = require('./routes/uploadImg');
 var UpdateUser = require('./routes/updateUser');
@@ -34,6 +35,7 @@ app.use('/feeds', FeedsRouter);
 app.use('/like', LikeRouter);
 app.use('/img', UploadImg);
 app.use('/updateuser', UpdateUser);
+app.use('/comments', Comments);
 
 app.use(function (req, res, next) {
   next(createError(404));

@@ -34,7 +34,8 @@ export default function AddText() {
                         likes:0,
                         comments:0,
                         dateSt:yourDate.toISOString().split('T')[0],
-                        likedUsers:[]
+                        likedUsers:[],
+                        commentedUsers:[]
 
                     }
                 ]
