@@ -83,10 +83,11 @@
 
 
 
-.Si a{
+.Si span{
     text-decoration: none;
     color: rgb(5, 60, 211);
     font-weight: 600;
+    cursor:pointer;
 }
 
 

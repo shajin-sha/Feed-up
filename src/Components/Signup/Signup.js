@@ -24,8 +24,8 @@ export default function Signin() {
                     {
                         "userName": UserName,
                         "password": Password,
-                        "email":Email,
-                        "profileUpdated":false,
+                        "email": Email,
+                        "profileUpdated": false,
 
                     }
                 ]
@@ -87,7 +87,9 @@ export default function Signin() {
                 <button type="submit">CREATE ACCOUNT</button>
 
 
-                <p className="AlreadyHave" >Already have a account ?<a href="/user/signin"> Login</a></p>
+                <p className="AlreadyHave" >Already have a account ?<span onClick={() => {
+                    history.push("/user/signin")
+                }} > Login</span></p>
 
                 <p className={Err ? "wring" : "wringFalse"} >{ErrText}</p>
 

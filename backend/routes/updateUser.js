@@ -16,8 +16,7 @@ const DpFIleName = dateNow + "--user"
 
 const storage = multer.diskStorage({
     destination: function (request, file, callback) {
-        // callback(null,"public/uploads/images")
-        callback(null, "../../client/public/uploads/UserProfiles")
+        callback(null,"../public/uploads/UserProfiles")
 
     },
 

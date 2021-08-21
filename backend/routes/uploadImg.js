@@ -12,8 +12,7 @@ const dateNow = date.getTime()
 
 const storage = multer.diskStorage({
     destination: function (request, file, callback) {
-        // callback(null,"public/uploads/images")
-        callback(null,"../../client/public/uploads/images")
+        callback(null,"../public/uploads/images")
 
     },
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import "./NavBar.css"
 import add from "./add_black_24dp.svg"
@@ -7,7 +8,7 @@ import UserOps from './userOps/userOps'
 export default function NavBar(props) {
     const [IsClose, setIsClose] = useState(false)
     const [Hover, setHover] = useState(false)
-    const [NavISVi, setNavISVi] = useState(false)
+
     const [width, setWidth] = useState(window.innerWidth)
     return (
         <div className="navBar" >
@@ -16,7 +17,7 @@ export default function NavBar(props) {
 
 
 
-            { width > 650 &&
+            {width > 650 &&
                 <div onMouseLeave={() => {
                     setHover(false)
                 }} onMouseEnter={() => {
@@ -24,16 +25,17 @@ export default function NavBar(props) {
                 }} className='User' >
 
 
-
+                
                     <div onClick={() => {
                         props.openUSER()
                     }}>    <UserOps Hover={Hover} />
 
                     </div>
 
+                    {/* close icon */}
 
                     <img onClick={() => {
-                        if (IsClose == false) {
+                        if (IsClose === false) {
                             setIsClose(!IsClose)
                         }
                         else {
@@ -43,15 +45,7 @@ export default function NavBar(props) {
                     }} className="add" src={IsClose ? close : add} alt="add" />
 
                 </div>
-
-
-
-
-
             }
-
-
-
 
         </div>
     )

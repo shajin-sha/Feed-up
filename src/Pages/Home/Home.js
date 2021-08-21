@@ -11,6 +11,7 @@ export default function Home() {
     const [IsADD, setIsADD] = useState(false)
     const [IsUser, setIsUser] = useState(false)
     const [IsFullVideo, setIsFullVideo] = useState(false)
+    // eslint-disable-next-line no-unused-vars
     const [Width, setWidth] = useState(window.innerWidth)
     const [Url, setUrl] = useState("")
     const [IsComments, setIsComments] = useState(false)

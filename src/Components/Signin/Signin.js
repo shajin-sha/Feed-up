@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import axios from "axios"
 import "../Signup/Signup.css"
@@ -39,10 +40,10 @@ export default function Signup(props) {
                         JSON.stringify(localStorage.setItem("dp", res.data.Dp))
                         JSON.stringify(localStorage.setItem("bio", res.data.Bio))
 
-                        if(res.data.profileUpdated === "true"){
+                        if (res.data.profileUpdated === "true") {
                             props.GoToNextPage("/Home")
                         }
-                        else{
+                        else {
                             props.GoToNextPage("/setup")
                         }
 
@@ -92,7 +93,9 @@ export default function Signup(props) {
 
                 <p style={{
                     fontSize: "0.8rem"
-                }} className="AlreadyHave" >Don't have account ?<a href="/user/signup"> Cerate a new Account</a></p>
+                }} className="AlreadyHave" >Don't have account ?<span onClick={()=>{  
+                    history.push('/user/signup')
+                }} > Cerate a new Account</span></p>
 
 
             </form>

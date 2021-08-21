@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import Signup from "../Signup/Signup"
 import Signin from "../Signin/Signin"
 import { BrowserRouter as Router, Route } from "react-router-dom"
@@ -7,11 +7,10 @@ import { useHistory } from "react-router-dom";
 
 export default function Athu() {
     let history = useHistory();
-    const [Next,setNext]=useState("leftFade")
 
 
- 
-    function GoToNextPage(goto){
+
+    function GoToNextPage(goto) {
         history.push(goto)
     }
 
@@ -19,34 +18,34 @@ export default function Athu() {
 
     return (
         <div className="bg" >
-            <div className="leftFade"/>
-        <div className="Athu" >
+            <div className="leftFade" />
+            <div className="Athu" >
 
 
-            <Router>
+                <Router>
 
-                <Route path='/user/signup' >
+                    <Route path='/user/signup' >
 
-                    <Signup/>
+                        <Signup />
 
-                </Route>
+                    </Route>
 
-                <Route path='/user/signin' >
-
-
-                    <Signin GoToNextPage={GoToNextPage}  />
-
-                </Route>
+                    <Route path='/user/signin' >
 
 
+                        <Signin GoToNextPage={GoToNextPage} />
 
-            </Router>
+                    </Route>
 
 
 
+                </Router>
 
 
-        </div>
+
+
+
+            </div>
         </div>
     )
 }

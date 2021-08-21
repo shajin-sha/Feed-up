@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import Feedby from './Feedby/Feedby'
 import "./FeedCard.css"
 import FeedAction from './FeedContent/FeedTextH1/FeedAction/FeedAction'

@@ -7,7 +7,7 @@
 .addTo{
     position: relative;
     transition: all 400ms ease-in-out;
-    top:5px;
+    top:-7px;
     /* top:-500px; */
     width: 100%;
     display: flex;
@@ -29,7 +29,7 @@
         top:-550px;
     }
     100%{
-        top:5px;
+        top:-7px;
     }
 }
 
