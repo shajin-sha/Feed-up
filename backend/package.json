@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm i --prefix . && npm run build --prefix ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

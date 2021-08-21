@@ -1,0 +1,60 @@
+[33mcommit 5ade9c683eebbff9db92b93877e23446bc688b52[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Aug 21 15:42:03 2021 +0530
+
+    package updated
+
+[33mcommit 3ce87eace704012c492bd2a10450777b92619b0e[m[33m ([m[1;31msocial-media-app/main[m[33m)[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Aug 21 15:39:39 2021 +0530
+
+    jons updated
+
+[33mcommit 241d4b6efb39843f248388d3ab97c10035c3a599[m[33m ([m[1;31mheroku/main[m[33m)[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Aug 21 15:32:18 2021 +0530
+
+    proxy updaed
+
+[33mcommit 4a90d3aefe4bc3935709174fe01f257927346953[m
+Merge: 37d5f43 16bcce5
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Aug 21 15:03:51 2021 +0530
+
+    Merge branch 'main' of https://github.com/shajin-sha/mern-stack-social-media-app
+
+[33mcommit 37d5f43cb8b5c14f87e002a973be2bc29f2d4366[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Aug 21 14:52:03 2021 +0530
+
+    v 1.0.0
+
+[33mcommit 16bcce591f4b4c5e6092fdd5815787664dbbe80f[m
+Author: shajin <86142635+shajin-sha@users.noreply.github.com>
+Date:   Wed Aug 11 20:31:16 2021 +0530
+
+    Update README.md
+
+[33mcommit 1b31a49f990760dc1c45255f0cdb448847ca9063[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Mon Jul 5 11:09:59 2021 +0530
+
+    1st v adding to github(gitPush)
+
+[33mcommit 5913fd69feed99ad43a902bdbe9c16233eaf4a5d[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Jul 3 18:47:48 2021 +0530
+
+    added:navbar bottom,added video in the feedCard with open and expand opt,user,bug fixed
+
+[33mcommit e93130377eb7e9ce49a6f32fd50804af5c7cc108[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Tue Jun 29 11:29:46 2021 +0530
+
+    added:feedText,HomePage,navBar,addFeedwindow,uploading imgs to mogodb(feedImg)
+
+[33mcommit d4bd65f76334ec05291096227df4122249466da5[m
+Author: shajin-sha <shajin.sha10@gmail.com>
+Date:   Sat Jun 26 20:27:24 2021 +0530
+
+    login athu added
