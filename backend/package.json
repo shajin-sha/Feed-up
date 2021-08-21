@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm i --prefix . && npm run build --prefix ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,6 +17,6 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.7"
   },
-  "proxy": "http://localhost:4000"
+  "proxy": "https://mern-stack-social-media.herokuapp.com/"
   
 }
