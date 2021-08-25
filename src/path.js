@@ -1,2 +1,2 @@
-export  const Image = "http://localhost:4000/images/uploads/";
-export const Profile = "http://localhost:4000/images/profile/";
+export  const Image = "https://feed-up-app.herokuapp.com/images/uploads/";
+export const Profile = "https://feed-up-app.herokuapp.com/images/profile/";
