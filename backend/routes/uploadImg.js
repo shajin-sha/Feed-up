@@ -37,8 +37,8 @@ const upload = multer({
 
 router.post('/', upload.single("Img"), function (req, res, next) {
 
-
-    MongoClient.connect("mongodb://localhost:27017", (err, client) => {
+    const uri = 'mongodb+srv://shajin:shajin1530.@cluster1.umyhu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    MongoClient.connect(uri, (err, client) => {
 
         if(err){
             console.log(err)

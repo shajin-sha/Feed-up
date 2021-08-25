@@ -3,9 +3,9 @@ var router = express.Router();
 var MongoClient = require("mongodb").MongoClient
 
 router.post('/', function (req, res, next) {
-    console.log(req.body)
+    const uri = 'mongodb+srv://shajin:shajin1530.@cluster1.umyhu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-    MongoClient.connect("mongodb://localhost:27017", (err, client) => {
+    MongoClient.connect(uri, (err, client) => {
 
         if(err){
             console.log(err)
