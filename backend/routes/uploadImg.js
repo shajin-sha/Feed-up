@@ -1,4 +1,3 @@
-const { request } = require('express');
 var express = require('express');
 var router = express.Router();
 var multer = require("multer")
@@ -12,7 +11,11 @@ const dateNow = date.getTime()
 
 const storage = multer.diskStorage({
     destination: function (request, file, callback) {
-        callback(null,"../public/uploads/images")
+        // node.js express public dir 
+        // storing static file at this dir 
+        // and access this from react-app
+        callback(null,"./public/images/uploads")
+        
 
     },
 

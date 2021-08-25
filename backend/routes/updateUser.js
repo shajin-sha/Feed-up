@@ -16,7 +16,10 @@ const DpFIleName = dateNow + "--user"
 
 const storage = multer.diskStorage({
     destination: function (request, file, callback) {
-        callback(null,"../public/uploads/UserProfiles")
+        // node.js express public dir 
+        // storing static file at this dir 
+        // and access this from react-app
+        callback(null, "./public/images/profile")
 
     },
 
@@ -60,7 +63,7 @@ router.post("/", upload.single("Dp"), (req, res, next) => {
                 userName: req.body.userName,
                 Bio: req.body.Bio,
                 Dp: DpFIleName + req.body.DpFIleName,
-                profileUpdated:req.body.profileUpdated,
+                profileUpdated: req.body.profileUpdated,
             }
             client.db("feed_app").collection("users").updateOne({ userName: data.userName }, { $set: { ...data } }, (err) => {
                 if (err) {
@@ -70,7 +73,7 @@ router.post("/", upload.single("Dp"), (req, res, next) => {
                         })
                 }
                 else {
-                    res.json({dp:DpFIleName+req.body.DpFIleName})
+                    res.json({ dp: DpFIleName + req.body.DpFIleName })
                 }
             })
         }

@@ -9,6 +9,8 @@ import FeedImg from "./FeedContent/FeedImg/FeedImg";
 import FeedImgCa from "./FeedContent/FeedImg/feedImgCa/feedImgCa"
 import FeedVi from './FeedContent/FeedVi/FeedVi'
 
+import {Image,Profile} from "../../path"
+
 
 export default function FeedCard(props) {
     const [Card, setCard] = useState([])
@@ -47,7 +49,7 @@ export default function FeedCard(props) {
             {Card.map((obj,index) => {
                 return (
                     <div className={ props.hidden ? "feedCardH":"feedCard"} >
-                        <Feedby dp={`${process.env.PUBLIC_URL}/uploads/UserProfiles/` + `${obj.feedUserDp}`} date={"• "+obj.dateSt} name={obj.feedby} />
+                        <Feedby dp={Profile+`${obj.feedUserDp}`} date={"• "+obj.dateSt} name={obj.feedby} />
                         <FeddTextH1 text={obj.title} />
                         {obj.likedUsers.map((obj2) => {
                             return (
@@ -64,10 +66,10 @@ export default function FeedCard(props) {
 
                         <FeedTextContent content={obj.feed} />
                         {obj.likedUsers.length > 0 ? null:  <FeedAction  comment={obj.commentedUsers} openComments={openComments}  likes={obj.likes} id={obj.key} like={like} />}
-                        { obj.ImgName ? obj.type === "image/jpeg" &&  <FeedImg imgsrc={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
-                        { obj.ImgName ? obj.type === "image/png" &&  <FeedImg imgsrc={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
-                        { obj.ImgName ? obj.type === "image/svg+xml" &&  <FeedImg imgsrc={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
-                        { obj.ImgName ? obj.type === "video/mp4" &&  <FeedVi url={obj.ImgName} openFullVideo={openFullVideo} video={`${process.env.PUBLIC_URL}/uploads/images/` + `${obj.ImgName}`} /> : null}
+                        { obj.ImgName ? obj.type === "image/jpeg" &&  <FeedImg imgsrc={Image+obj.ImgName} /> : null}
+                        { obj.ImgName ? obj.type === "image/png" &&  <FeedImg  imgsrc={Image+obj.ImgName} /> : null}
+                        { obj.ImgName ? obj.type === "image/svg+xml" &&  <FeedImg  imgsrc={Image+obj.ImgName} /> : null}
+                        { obj.ImgName ? obj.type === "video/mp4" &&  <FeedVi url={obj.ImgName} openFullVideo={openFullVideo} video={Image+obj.ImgName} /> : null}
                         {obj.caption ? <FeedImgCa caption={obj.caption} /> : null}
                     </div>
                 )

@@ -3,6 +3,7 @@ import "./Comments.css"
 import close from "./close_black_24dp (1).svg"
 import AddCommentsContent from "./AddComments/Addcomments"
 import axios from 'axios'
+import {Profile} from "../../path"
 
 export default function Comments(props) {
     const [Comments,setComments]=useState(props.comments)
@@ -37,7 +38,7 @@ export default function Comments(props) {
 
                     <div className="commentsContent">
                         <div className="commentsContentUser" >
-                            <img src={`${process.env.PUBLIC_URL}/uploads/UserProfiles/` + `${obj.commentedUserDP}`} alt="userLogo" />
+                            <img src={Profile+obj.commentedUserDP} alt="userLogo" />
                             <p>{obj.commentedBy}</p>
                         </div>
                         <div className="COMMENT" >
@@ -47,8 +48,6 @@ export default function Comments(props) {
 
                 )
             })}
-
-
 
 
 
