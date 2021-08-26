@@ -40,7 +40,7 @@ export default function AddText() {
                     }
                 ]
 
-                axios.post("/feed",data).then((res)=>{
+                axios.post("https://social-media-app-api.herokuapp.com/feed",data).then((res)=>{
                     console.log(res)
 
                 })

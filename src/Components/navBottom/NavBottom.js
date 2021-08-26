@@ -2,7 +2,7 @@ import React from 'react'
 import "./navBottom.css"
 import addLogo from "./add_circle_black_24dp.svg"
 import home from "./home_black_24dp.svg"
-
+import {Profile} from "../../path"
 export default function NavBottom(props) {
     return (
         <div className="navBottom" >
@@ -15,7 +15,7 @@ export default function NavBottom(props) {
                     }} ><img style={{width:'3rem',userSelect:"none"}} src={addLogo} alt="addPost"/></div>
                     <div  onClick={()=>{
                         props.openUSER()
-                    }} ><img className="navBottomUser" src={`${process.env.PUBLIC_URL}/uploads/UserProfiles/` + `${localStorage.getItem("dp")}`} alt="userLogo"/></div>
+                    }} ><img className="navBottomUser" src={Profile+localStorage.getItem("dp")} alt="userLogo"/></div>
 
         </div>
     )

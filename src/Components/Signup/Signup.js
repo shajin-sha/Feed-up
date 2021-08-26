@@ -31,7 +31,7 @@ export default function Signin() {
                 ]
 
 
-                axios.post("/users", data).then((res) => {
+                axios.post("https://social-media-app-api.herokuapp.com/users", data).then((res) => {
                     if (res.data.err) {
                         setErr(true)
                         setErrText(res.data.err)

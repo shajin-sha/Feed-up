@@ -16,7 +16,7 @@ export default function FeedCard(props) {
     const [Card, setCard] = useState([])
 
     useEffect(() => {
-        axios.get("/feeds").then((res) => {
+        axios.get("https://social-media-app-api.herokuapp.com/feeds").then((res) => {
             setCard(res.data)
         })
 
@@ -25,11 +25,11 @@ export default function FeedCard(props) {
 
     function like(key, liked) {
         if (liked !== true) {
-            axios.post("/like", { key: key, like: +1, user: localStorage.getItem("userName") }).then((res) => {
+            axios.post("https://social-media-app-api.herokuapp.com/like", { key: key, like: +1, user: localStorage.getItem("userName") }).then((res) => {
             })
         }
         else {
-            axios.post("/like", { key: key, like: -1,user:localStorage.getItem("userName") }).then((res) => {
+            axios.post("https://social-media-app-api.herokuapp.com/like", { key: key, like: -1,user:localStorage.getItem("userName") }).then((res) => {
             })
         }
     }

@@ -52,7 +52,7 @@ export default function AddImg() {
                     formdata.append("dp",localStorage.getItem("dp"))
                     formdata.append("feedby", localStorage.getItem("userName"))
 
-                    axios.post("/img", formdata).then((res) => {
+                    axios.post("https://social-media-app-api.herokuapp.com/img", formdata).then((res) => {
                         e.preventDefault()
 
                     })

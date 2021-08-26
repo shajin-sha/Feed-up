@@ -19,7 +19,7 @@ export default function Comments(props) {
         }
         Comments.push(data)
         setComments(Comments)
-        axios.post("/comments", data).then((res) => {
+        axios.post("https://social-media-app-api.herokuapp.com/comments", data).then((res) => {
             console.log(res.data)
         })
     }

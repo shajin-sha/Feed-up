@@ -28,7 +28,7 @@ export default function Signup(props) {
                     }
                 ]
 
-                axios.post("/find", data).then((res) => {
+                axios.post("https://social-media-app-api.herokuapp.com/find", data).then((res) => {
                     if (res.data.err) {
                         setErrText(res.data.err)
                         setErr(true)

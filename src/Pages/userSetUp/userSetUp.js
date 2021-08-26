@@ -108,7 +108,7 @@ export default function UserSetUp() {
 
 
 
-                axios.post("/updateuser", formdata).then((res) => {
+                axios.post("https://social-media-app-api.herokuapp.com/updateuser", formdata).then((res) => {
                     if (res.data.dp) {
 
 
