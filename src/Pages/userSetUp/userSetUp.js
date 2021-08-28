@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import SetupName from './start/setupName/setupName'
 import Start from "./start/start"
 import bioSvg from "./start/setupName/undraw_Social_bio_re_0t9u.svg"
 import SetBio from './SetBio/SetBio'
 import Setdp from './setDp/setdp'
 import { useHistory } from "react-router-dom"
+import {FirebaseContext} from "../../store/FirebaseContext"
+
 import axios from 'axios'
 
 export default function UserSetUp() {
     const history = useHistory()
     const [Next, setNext] = useState(0)
+    const { firebase } = useContext(FirebaseContext);
 
-
-
-    //user data 
+    // config date for uploading (post) data with date and time...
+     const dateX = new Date();
 
     const [Name, setName] = useState(null)
     const [Bio, setBio] = useState(null)
@@ -23,14 +25,12 @@ export default function UserSetUp() {
 
 
 
-    // calling function from other components
+    // calling function from other components --start
 
     function Next0(nextValue) {
         setNext(nextValue)
 
     }
-
-
     function getName(value) {
         setName(value)
     }
@@ -45,7 +45,7 @@ export default function UserSetUp() {
     }
 
 
-
+    // calling function from other components --end
 
 
     return (
@@ -79,54 +79,47 @@ export default function UserSetUp() {
             }} className="setName" >next</button>}
 
             { Next === 3 && <button onClick={() => {
+                
 
-                // update user date with userName as a key 
+                // upload user dp(prifle)
 
+                firebase
+                .storage()
+                .ref(`/profile/${Dp.name+dateX.getTime()}`)
+                .put(Dp)
+                .then(({ ref }) => {
+                  // image uploaded
+                  ref.getDownloadURL().then((url) => {
+                      console.log(url)
+   
+                    // data for out servr
+                    // url of the file have to send to backend
 
                 //difine user data 
-
-                // let data = {
-                //     Name: Name,
-                //     Bio: Bio,
-                //     userName: localStorage.getItem("userName"),
-                //     Dp:Dp,
-                //     DpFIleName:Dp.name,
-                // }
-
-
-
-
-                let file = Dp
-                let formdata = new FormData()
-
-                formdata.append("Dp", file)
-                formdata.append("Name", Name)
-                formdata.append("Bio", Bio)
-                formdata.append("DpFIleName", file.name)
-                formdata.append("userName", localStorage.getItem("userName"))
-                formdata.append("profileUpdated", true)
-
-
-
-                axios.post("https://social-media-app-api.herokuapp.com/updateuser", formdata).then((res) => {
+                let data = {
+                    Name: Name,
+                    Bio: Bio,
+                    userName: localStorage.getItem("userName"),
+                    DpUrl:url,
+                    profileUpdated:"true"
+                }
+                
+                
+                axios.post("https://social-media-app-api.herokuapp.com/updateuser", data).then((res) => {
                     if (res.data.dp) {
-
-
                       JSON.stringify(localStorage.setItem("dp",res.data.dp))
-                        history.push("/home")
+                      history.push("/home")
                     }
                     else{
-                        alert(res.data.err)
+                        console.log("err to update user / change")
                     }
 
                 })
-
+  
+                  });
+                });
 
             }} className="setName" >finish</button>}
-
-
-
-
 
         </div>
     )

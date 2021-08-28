@@ -19,10 +19,14 @@
     width: 100%;
     cursor: pointer;
 }
-.navBottom div:active{
-    background: rgb(255, 255, 255);
+
+.navBottom div img{
+    transition:100ms all ease-in-out;
 }
 
+.navBottom div img:active{
+    opacity: 85%;
+}
 
 
 

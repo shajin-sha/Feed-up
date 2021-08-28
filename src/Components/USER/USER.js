@@ -1,7 +1,6 @@
 import React from 'react'
 import "./USER.css"
 import AddImg from "./add_photo_alternate_black_24dp.svg"
-import { Profile } from "../../path"
 
 export default function USER() {
     return (
@@ -25,7 +24,7 @@ export default function USER() {
                         </div>
 
                         <div className="imgdiv" >
-                            <img className='userimg' src={Profile + localStorage.getItem("dp")} alt="" />
+                            <img className='userimg' src={localStorage.getItem("dp")} alt="" />
                         </div>
                         <img className="addIMG" src={AddImg} alt="" />
                     </div>

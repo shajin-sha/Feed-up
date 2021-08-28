@@ -1,126 +1,106 @@
-.img{
-    top:29%;
-    position:absolute;
-    background: rgb(230, 229, 229);
-    width: 100%;
-    height: 71%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
+.img {
+  top: 29%;
+  position: absolute;
+  background: rgb(230, 229, 229);
+  width: 100%;
+  height: 71%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
-
-@keyframes imgANim{
-    0%{
+@keyframes imgANim {
+  0% {
     bottom: -20%;
-}
-    100%{
-        bottom:10%;
-    }
-}
-
-
-
-
-.img .from{
-    position: absolute;
-    background: rgb(255, 255, 255);
-    bottom: 0%;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    animation-name: imgANim;
-    animation-duration: 209ms;
-    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.089);
+  }
+  100% {
+    bottom: 10%;
+  }
 }
 
-
-.postimgbnt{
-    position:absolute;
-    background: rgb(190, 188, 188);
-    padding: 1%;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    left:4%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img .from {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  bottom: 0%;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  animation-name: imgANim;
+  animation-duration: 209ms;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.089);
 }
 
-.postimgbnt:hover{
-    background: rgb(160, 157, 157);
+.postimgbnt {
+  position: absolute;
+  background: rgb(190, 188, 188);
+  padding: 1%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  left: 4%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.captions{
-    position: relative;
-    border: none;
-    background: rgb(190, 188, 188);
-    padding: 1.1%;
-    width: 40%;
-    border-radius: 30px;
-    outline: none;
-    font-size: 1.1rem;
-    margin-right: 20%;
+.postimgbnt:hover {
+  background: rgb(160, 157, 157);
 }
 
-
-
-.submitBnt{
-    position:absolute;
-    border: none;
-    background: rgba(58, 58, 58, 0.89);
-    padding: 1%;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    right: 4%;
-    font-size: 1.2rem;
-
+.captions {
+  position: relative;
+  border: none;
+  background: rgb(190, 188, 188);
+  padding: 1.1%;
+  width: 40%;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1.1rem;
+  margin-right: 20%;
 }
 
-.filePERV{
-    width: 100%;
-    height: auto;
+.submitBnt {
+  position: absolute;
+  border: none;
+  background: rgba(58, 58, 58, 0.89);
+  padding: 1%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  right: 4%;
+  font-size: 1.2rem;
 }
 
-
-.filePERVVi{
-    width: 60%;
-    height: auto;
-    border-radius: 6px;
-
-
-
+.filePERV {
+  width: 100%;
+  height: auto;
 }
 
+.filePERVVi {
+  width: 60%;
+  height: auto;
+  border-radius: 6px;
+}
 
+@media (min-width: 300px) and (max-width: 640px) {
+  .captions {
+    margin-right: 2%;
+    width: 50%;
+  }
 
-@media (min-width:300px) and (max-width:640px){ 
-
-    .captions{
-        margin-right: 2%;
-        width: 50%;
-    }
-
-
-
-    
-
-.img .from{
+  .img .from {
     position: absolute;
     background: rgb(255, 255, 255);
     bottom: 10%;
@@ -134,10 +114,27 @@
     animation-name: imgANim;
     animation-duration: 209ms;
     box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.089);
+  }
 }
 
-
-
-    
+@media (min-width: 150px) and (max-width: 650px) {
+  .img .upLoadBar {
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    bottom: 10.5%;
+    left: 0%;
+    height: 0.7%;
+    background: rgb(33, 122, 224);
+    z-index: 100000000000000000000000000;
+  }
 }
+.img .upLoadBar {
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 1%;
+    background: rgb(33, 122, 224);
+    z-index: 100000000000000000000000000;
+  }
 
