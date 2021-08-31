@@ -6,10 +6,11 @@ export default function SetBio(props) {
         <Fragment>
 
             <h1 className="SetupBio" >Setup your bio</h1>
-            <textarea onChange={(e) => {
-                
+            <textarea style={{
+                position:'relative',
+                height:'40%'
+            }} onChange={(e) => {
                 props.getBio(e.target.value)
-
             }} placeholder=" some things describes you" className="YourNameIN" type="text" />
 
         </Fragment>

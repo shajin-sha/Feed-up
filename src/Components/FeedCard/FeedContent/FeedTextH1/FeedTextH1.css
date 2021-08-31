@@ -3,13 +3,13 @@
     max-width: 99%;
     text-align: left;
     margin-left: 2%;
-    font-size: 1rem;
-    color: rgb(56, 55, 55);
+    font-size: 0.9rem;
+    color: rgb(37, 28, 28);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .feedTextH1::first-letter{
-    color: rgb(8, 8, 8);
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
  

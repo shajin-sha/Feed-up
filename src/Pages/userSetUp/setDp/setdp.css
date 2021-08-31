@@ -1,21 +1,42 @@
 .userDpIMG{
+    position: relative;
+    margin: auto;
+    left:0;
+    right: 0;
     width: 17rem;
     height: 17rem;
+    max-height: auto;
     border-radius: 50%;
 }
 
 .addDp{
-    position:relative;
-    width: 2rem;
-    padding: 0.5%;
-    border-radius: 50%;
-    right:4%;
-    bottom: 10px;
+    position:absolute;
+    width: 85%;
+    background: rgb(236, 163, 28);
+    height: 6%;
+    margin: auto;
+    left:0;
+    right:0%;
+    bottom: 14%;
     cursor: pointer;
-    background: rgb(226, 225, 225);
+    border-radius: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.dpIMG{
+    width: 2rem;
+    margin-left: 5%;
 }
 
-
-.addDp:hover{
+.addDp:active{
     background: rgb(172, 168, 168);
+}
+
+@media (min-width:120px) and (max-width:660px){ 
+    .addDp{
+
+    }
 }

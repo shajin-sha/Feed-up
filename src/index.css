@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(241, 241, 241);
+  background: rgb(240, 240, 240);
 }
 
 code {
@@ -24,5 +24,9 @@ img,
 video,
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
-  outline: none;
+  outline: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
 }

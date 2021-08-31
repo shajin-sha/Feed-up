@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Add.css'
 import AddImg from './AddImg/AddImg'
 import AddText from './AddText/AddText'
@@ -9,8 +9,22 @@ import feedBlack from "./feed_black_24dp.svg"
 export default function Add() {
     const [BorderTo, setBorderTo] = useState("")
     const [Open, setOpen] = useState("")
+
+
+
+    useEffect(() => {
+        
+        window.scrollBy(0,0)
+        setOpen("Img")
+        setBorderTo("addimg")
+        
+    }, [])
+
+
+
+
     return (
-        <Fragment>
+        <div className="ADDContect" >
         <div className="addObj" >
             <div className='addTo' >
                 <button onClick={() => {
@@ -25,15 +39,6 @@ export default function Add() {
                 <img src={videoCam} alt=""/>
                 
                 </button>
-                {/* <button style={{
-                    borderBottom: BorderTo === "addvideo" ? "4px solid #fff" : "4px solid #ffffff00"
-                }} onClick={() => {
-                    setOpen("")
-                    setBorderTo("addvideo")
-                }} >Fed video
-
-                <img src={videoCam} alt=""/>
-                </button> */}
                 <button style={{
                     borderBottom: BorderTo === "addtext" ? "4px solid #fff" : "4px solid #ffffff00"
                 }} onClick={() => {
@@ -68,6 +73,6 @@ export default function Add() {
 
 
 
-        </Fragment>
+        </div>
     )
 }

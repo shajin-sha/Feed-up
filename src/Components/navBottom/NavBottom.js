@@ -2,7 +2,6 @@ import React from "react";
 import "./navBottom.css";
 import addLogo from "./add_circle_black_24dp.svg";
 import home from "./home_black_24dp.svg";
-import { Profile } from "../../path";
 import UserIcon from "./userIcon.svg";
 
 export default function NavBottom(props) {

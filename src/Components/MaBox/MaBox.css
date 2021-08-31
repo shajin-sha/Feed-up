@@ -1,0 +1,54 @@
+.MaBox{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    background: #ffff;
+    border-radius: 9px;
+    width: 45%;
+    height: 20%;
+    max-height: max-content;
+    z-index: 1000000000000;
+
+}
+
+.MaBox .MaBoxAction{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(94, 93, 93, 0.11);
+    height: 40px;
+}
+
+.MaBoxIcon{
+    position: relative;
+    margin-right: 74%;
+    margin-bottom: 1%;
+}
+
+.MaBoxTitle{
+    position: absolute;
+    padding:none;
+    border:none;
+    margin-right: 40%;
+    font-size: 1.3rem;
+}
+.MaContext{
+    position: relative;
+    text-align: center;
+    margin-left: 5%;
+    font-size: 1.3em;
+    max-width: 90%;
+    padding-bottom: 10%;
+}
+
+@media (min-width:150px) and (max-width:550px){ 
+    .MaBox{
+        width: 85%;
+        padding-bottom: 6%;
+        background: rgba(255, 255, 255, 0.527);
+        backdrop-filter: blur(20px);
+    }
+}

@@ -8,7 +8,7 @@ import { FirebaseContext } from "../../../store/FirebaseContext";
 export default function AddImg() {
   const [File, setFile] = useState(null);
   const [Caption, setCaption] = useState("");
-  const [ProgressBar,setProgressBar]=useState(0 + '%')
+  const [ProgressBar,setProgressBar]=useState('')
   const { firebase } = useContext(FirebaseContext);
 
   // config date for uploading (post) data with date and time...
@@ -130,7 +130,7 @@ export default function AddImg() {
           />
 
           <button value="submit" className="submitBnt" type="submit">
-            <img src={send} alt="" />
+            <img src={send} alt="send" />
           </button>
         </form>
 

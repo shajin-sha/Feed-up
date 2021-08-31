@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+    padding-bottom: 3%;
 
 }
 
@@ -18,12 +19,17 @@
 
 .feedby .userName{
     margin-left: 4%;
+    font-size: 0.8rem;
+    color: rgb(61, 61, 63);
 }
 
 
 .date{
-    position: relative;
+    position:absolute;
     text-align: left;
-    left:2%;
-    color: rgb(187, 187, 187);
+    left:14%;
+    color: rgba(187, 187, 187, 0.39);
+    top:6%;
+    font-size: 0.6rem;
+    display: none;
 }

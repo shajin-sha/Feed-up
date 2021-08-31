@@ -117,24 +117,22 @@
   }
 }
 
-@media (min-width: 150px) and (max-width: 650px) {
-  .img .upLoadBar {
-    transition: all 700ms ease-in-out;
-    position: absolute;
-    bottom: 10.5%;
-    left: 0%;
-    height: 0.7%;
-    background: rgb(33, 122, 224);
-    z-index: 100000000000000000000000000;
-  }
+.upLoadBar{
+  transition: all 700ms ease-in-out;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 1%;
+  background: rgb(19, 109, 211);
+  z-index: 10000000;
 }
-.img .upLoadBar {
-    transition: all 700ms ease-in-out;
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    height: 1%;
-    background: rgb(33, 122, 224);
-    z-index: 100000000000000000000000000;
-  }
 
+
+
+@media (min-width: 150px) and (max-width: 750px) {
+.upLoadBar{
+    bottom: 10.5%;
+    height: 0.7%;
+}
+  
+}

@@ -1,27 +1,35 @@
 .feedCard{
+    transition: all 325ms ease-in-out;
     position: relative;
-    top: 140px;
+    top: 330px;
     height:max-content;
     width: 56%;
     left:0;
     right: 0;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     background: #fff;
     padding-bottom: 6%;
     min-height: 150px;
-
-    box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
-    -webkit-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
-    -moz-box-shadow: 20px 21px 44px -10px rgba(0,0,0,0.13);
+    z-index: 10000000;
+    padding-top: 1.7%;
     margin-top: 1%;
+    border-radius: 20px;
+    transform: scale(0.95)
 }
+
+
+.feedCard:active{
+    transform: scale(0.8);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+
+
 
 
 .feedCardH{
     visibility: collapse;
-
-
 }
 
 
@@ -31,7 +39,7 @@
 
     .feedCard{
         width: 95%;
-        padding-bottom: 10%;
+        padding-bottom: 15%;
     
     }
     
@@ -43,6 +51,7 @@
     .feedCard{
         width: 100%;
         padding-bottom: 10%;
+        /* display: none; */
     
     }
 

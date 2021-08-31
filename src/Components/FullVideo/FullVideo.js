@@ -10,7 +10,7 @@ export default function FullVideo(props) {
                 props.close()
             }} ><img  src={close} alt=""/></button>
                 <video autoPlay controls >
-                    <source src={`${process.env.PUBLIC_URL}/uploads/images/`+`${props.url}`} />
+                    <source src={props.url} />
                 </video>
 
             </div>

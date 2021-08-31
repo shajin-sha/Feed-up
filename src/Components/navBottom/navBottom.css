@@ -1,17 +1,24 @@
 .navBottom{
     position:fixed;
     bottom: 0%;
-    height: 8%;
-    background: rgba(255, 255, 255, 0.918);
+    height: 8.5%;
+    background: rgba(255, 255, 255, 0.815);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items:center;
-    z-index: 1000000;
+    z-index: 10000000000;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-top: 1px solid #9c9a9a21;
+    border-left: 1px solid #9c9a9a21;
+    border-right: 1px solid #9c9a9a21;
+    backdrop-filter: blur(4px);
 }
 
 .navBottom div{
-    background: rgba(255, 255, 255, 0.726);
+    transition: all 125ms ease-in-out;
+    /* background: rgba(255, 255, 255, 0.726); */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -25,7 +32,7 @@
 }
 
 .navBottom div img:active{
-    opacity: 85%;
+    transform: scale(0.9);
 }
 
 

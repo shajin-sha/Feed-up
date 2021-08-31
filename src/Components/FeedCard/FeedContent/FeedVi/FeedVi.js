@@ -8,7 +8,7 @@ import expand from "./open_in_full_black_24dp.svg"
 export default function FeedVi(props) {
     const [IsPlaying, setIsPlaying] = useState(false)
     const [IsExpand, setIsExpand] = useState(false)
-    const [e,setE]=useState(null)
+    const [E,setE]=useState(null)
 
     return (
         <Fragment>
@@ -33,7 +33,7 @@ export default function FeedVi(props) {
                 </video>
                 {IsPlaying === false && <img className="play" src={play} alt="logo" />}
                 <img onClick={() => {
-                    e.target.pause()
+                    E.target.pause()
                    props.openFullVideo(props.url)
 
                 }} className="full" src={full} alt="logo" />

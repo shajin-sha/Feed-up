@@ -1,32 +1,47 @@
 .welcomeContentText{
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 900;
-    color: rgb(73, 72, 72);
+    color: rgba(73, 72, 72, 0.767);
+    animation-name: SETNAMEANIM;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: inherit;
 }
 
 .welcomeContentText .span{
-    color: #536DFE;
+    color: #5a649e9f;
+
 }
 .welcomesvg{
-    width: 40%;
+    width: 70%;
+    margin-top: 20%;
 }
 
 .btnPR{
+    transition: all 100ms ease-in-out;
+    margin: auto;
+    position:absolute;
     border: none;
-    background:#536DFE; 
+    background:#202022; 
     color: #fff;
-    font-size:1.3em;
+    font-size:1em;
     width: 20%;
     padding: 0.9%;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 700;
     outline: none;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    letter-spacing: 2px;
 }
 
 
-.btnPR:hover{
-    background:#4963f5; 
+.btnPR:active{
+    transform: scale(1.02);
+    box-shadow: 6px 6px 10px 5px rgba(30, 36, 51, 0.192);
 }
 
 .link a{
@@ -39,4 +54,28 @@ color: #85868d;;
 position:absolute;
 bottom: 2%;
 left:2%;
+}
+
+.decWleomc{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    top:-5px;
+    color: rgba(5, 5, 5, 0.486);
+}
+
+
+
+@media (min-width:120px) and (max-width:660px){ 
+
+    .btnPR{
+        width: 85%;
+        height: 7%;
+        border-radius: 50px;
+        
+    }
+    .decWleomc{
+        letter-spacing: 0.8px;
+    }
+
 }

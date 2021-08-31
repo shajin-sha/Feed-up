@@ -1,0 +1,58 @@
+.UserAnimSENDINGData{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000000000;
+    background: rgb(9, 102, 209);
+}
+
+.UserAnimSENDINGData .Icon{
+   position: fixed;
+   left:0;
+   right:0; 
+   bottom: 0;
+   top:0;
+   margin: auto;
+   width: 5rem;
+   animation-duration: 830ms;
+   animation-iteration-count: infinite;
+
+}
+
+@keyframes IconLOd{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+    
+}
+.UserAnimSENDINGData .verified{
+    width: 5rem;
+}
+
+.UserAnimSENDINGData .all-done{
+    position: fixed;
+    left:0;
+    right:0; 
+    bottom: 0;
+    top:30%;
+    margin: auto;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    animation-duration: 230ms;
+    animation-name: all-done;
+}
+
+
+@keyframes all-done{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}

@@ -2,5 +2,10 @@
     font-weight: 900;
     color:rgb(65, 62, 62);
     font-size: 2rem;
+    animation-name: SETNAMEANIM;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: inherit;
     
 }

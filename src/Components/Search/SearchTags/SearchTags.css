@@ -1,0 +1,43 @@
+.SearchTags{
+    position:absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 160%;
+    overflow:visible;
+    left:0%;
+    top:10%;
+    margin-top: 1%;
+    z-index: 10000000000;
+    /* height: p; */
+    background: rgb(255, 255, 255);
+    animation-name: Searchtags;
+    animation-duration: 540ms;
+    margin-top: 0.9em;
+    padding-bottom: 2%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+
+@keyframes Searchtags {
+    0%{
+        width: 100%;
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.SearchTags > div {
+    background: rgb(230, 230, 230);
+    width: max-content;
+    min-width:80px;
+    border-radius: 50px;
+}
+
+.SearchTags > div > p{
+    border: 0px;
+    padding: 0px;
+    font-size: 0.9rem;
+    margin: 10%;
+}

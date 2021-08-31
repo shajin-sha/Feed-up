@@ -1,17 +1,17 @@
 import React, { Fragment, useState } from 'react'
 import "./setdp.css"
-import userDefault from "./user.jpg"
-import addimglogo from "./add_a_photo_black_24dp.svg"
+import userDefault from "./63b311b9-ee1f-488a-8712-06808775c879.svg"
+import addimglogo from "./collections_white_24dp.svg"
 
 export default function Setdp(props) {
     const [Dp, setDp] = useState(null)
     return (
 
         <Fragment>
-            <h3 className="YourName" >Set up your dp</h3>
+            <h3 className="YourName" >Your Profile</h3>
             <div>
                 <img className="userDpIMG" src={Dp ? URL.createObjectURL(Dp):userDefault} alt="userlogo"/>
-                <label  htmlFor="dp" ><img className="addDp" src={addimglogo} alt=""/></label>
+                <label className="addDp" htmlFor="dp" >SELECT<img className="dpIMG" src={addimglogo}  alt=""/></label>
             </div>
 
             <input onChange={(e)=>{

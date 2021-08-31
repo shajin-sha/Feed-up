@@ -11,11 +11,7 @@ export default function AddText() {
 
 
     let date = new Date()
-
     const dateNow = date.getTime()
-
-
-
     const yourDate = new Date()
 
 
@@ -46,15 +42,15 @@ export default function AddText() {
                 })
                 
             }}>
-                <User name={localStorage.getItem("userName")} />
+                <User dp={localStorage.getItem("dp")} name={localStorage.getItem("userName")} />
 
                 <input onChange={(e) => {
                     setTitle(e.target.value)
-                }} placeholder="title" type="text" /><img className="emotions" src={Emoticon} alt="" />
+                }} required placeholder="Title" type="text" /><img className="emotions" src={Emoticon} alt="" />
 
                 <textarea onChange={(e) => {
                     setFeedContent(e.target.value)
-                }} placeholder="your feed" cols="10" rows="5"></textarea>
+                }} required placeholder="Your feed" cols="10" rows="5"></textarea>
 
 
                 <button type="submit" className="send" >

@@ -1,8 +1,8 @@
 {
   "name": "Feed Up",
   "short_name": "Feed",
-  "theme_color": "#117af2",
-  "background_color": "#ffffff",
+  "theme_color": "#f5f3f2",
+  "background_color": "#f5f3f2",
   "display": "standalone",
   "scope": "./",
   "start_url": "./home",

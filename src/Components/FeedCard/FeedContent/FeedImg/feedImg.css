@@ -1,12 +1,29 @@
 .feedImg{
     position: relative;
-    max-width: 100%;
+    max-width: 90%;
     margin-bottom: 4%;
+    width: 200%;
     border-radius: 3px;
     user-select: none;
     -webkit-user-drag: none;
+    border-radius: 10px;
+    pointer-events: none;
 }
+
+.FEEDIMG{
+    position:relative;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+
 
 .imgCaption{
     max-width: 80%;
+    margin-bottom: 20%;
+    font-size: 0.1rem;
 }
