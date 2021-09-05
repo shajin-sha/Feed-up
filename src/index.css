@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(240, 240, 240);
 }
 
 code {
@@ -13,6 +12,12 @@ code {
     monospace;
 }
 
+
+@media (prefers-color-scheme:dark){
+  body{
+    background: rgb(24, 24, 24);
+  }
+}
 
 
 

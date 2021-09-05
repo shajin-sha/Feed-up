@@ -1,0 +1,11 @@
+.SearchTags{
+    display: none;
+}
+.SearchContentBox{
+    display: none;
+}
+
+.SearchContent{
+    top:-50px;
+}
+

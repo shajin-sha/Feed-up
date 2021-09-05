@@ -1,0 +1,72 @@
+.TapPhoto{
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    z-index: 9999909999;
+    bottom: 0%;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    animation-duration: 90ms;
+    animation-name: TapPhotoOpen;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.over{
+    margin-top: 3%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(10, 10, 10, 0.664);
+
+}
+
+.OverCLose{
+    position:absolute;
+    right: 2%;
+    margin-top: 8%;
+    background: transparent;
+    border: none;
+    outline: none; 
+}
+
+.OverUSer{
+    /* background:red; */
+    text-align: left;
+    margin-left: 10%;
+}
+.profile_image_profile_image{
+    border-radius: 50px;
+    position: relative;
+    margin-top: 10%;
+    margin-right: 40%;
+}
+.TapPhotoNAme{
+    color: #ffff;
+    position: relative;
+    margin-right: 25%;
+    max-width: 85%;
+    font-weight: 700;
+}
+
+.TapPhotBio{
+    color: #ffff;
+    position: relative;
+    top:0%;
+    max-width: 85%;
+}
+
+
+
+
+
+@keyframes TapPhotoOpen {
+    0%{
+        bottom:-100%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}

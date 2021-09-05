@@ -1,11 +1,12 @@
 import "./UserAnim.css";
 import icon from "./autorenew_white_24dp.svg";
-
 import verified from "./verified_user_white_24dp.svg";
 
 export default function UserAnim(props) {
   return (
-    <div className="UserAnimSENDINGData">
+    <div style={{
+      top: props.post ? '0%' :'100vh',
+    }} className="UserAnimSENDINGData">
       {props.Respon ? null : (
         <img
           style={{

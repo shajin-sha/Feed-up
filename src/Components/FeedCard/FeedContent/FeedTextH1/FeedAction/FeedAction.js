@@ -55,6 +55,10 @@ export default function FeedAction(props) {
         </div>
 
         <button
+        style={{
+          visibility:'hidden',
+          pointerEvents:'none'
+        }}
           onClick={() => {
             props.openComments(props.id, props.comment);
             if (IsCommented === false) {

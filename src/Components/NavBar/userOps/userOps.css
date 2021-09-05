@@ -25,6 +25,10 @@ margin-right: 2%;
     animation-duration: 350ms;
 }
 
+
+
+
+
 @keyframes userAnim{
     0%{
         opacity: 0%;

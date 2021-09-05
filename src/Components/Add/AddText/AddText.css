@@ -12,6 +12,7 @@
     border: none;
     border-radius: 7px;
     margin-bottom: 2%;
+    background: transparent;
 }
 
 
@@ -29,7 +30,6 @@
     padding-top: 10%;
     animation-name: ADDTextAnim;
     animation-duration: 509ms;
-    border-top: 3px solid rgba(255, 255, 255, 0.267);
     border-top-left-radius:15px ;
     border-top-right-radius:15px;
     
@@ -79,8 +79,8 @@
 
 }
 
-.emotions:hover{
-    background: rgb(184, 182, 182);
+.emotions:active{
+    background: rgb(221, 221, 221);
 }
 
 
@@ -88,7 +88,7 @@
     position:fixed;
     bottom: 10%;
     right: 3%;
-    background: rgb(68, 67, 67);
+    background: rgb(194, 200, 206);
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -97,6 +97,14 @@
     cursor: pointer;
 }
 
-.send:hover{
-    background: rgba(13, 13, 14, 0.781);
+.send:active{
+    background: rgba(147, 184, 240, 0.781);
 }
+
+@media (prefers-color-scheme:dark){
+    .AddText{
+      background: rgb(32, 32, 32);
+    }
+
+  }
+  

@@ -4,10 +4,13 @@ import "./SearchTags.css";
 export default function SearchTags(props) {
   const [TagNow, setTagNow] = useState("Photos");
   return (
-    <div className="SearchTags">
+    <div style={{
+    display:props.dis  === "none" ? "none" :"flex"
+    }} className="SearchTags">
       <div
         style={{
           backgroundColor: TagNow === "Photos" && "dodgerblue",
+          color: TagNow === "Photos" ? 'white' : "#1f1f1f75",
         }}
         onClick={() => {
           props.photos();
@@ -19,9 +22,12 @@ export default function SearchTags(props) {
       <div
         style={{
           backgroundColor: TagNow === "People" && "dodgerblue",
+          color: TagNow === "People" ? 'white' : "#1f1f1f75",
         }}
         onClick={() => {
+          props.People()
           setTagNow("People");
+
         }}
       >
         <p>People</p>
@@ -29,6 +35,7 @@ export default function SearchTags(props) {
       <div
         style={{
           backgroundColor: TagNow === "Videos" && "dodgerblue",
+          color: TagNow === "Videos" ? 'white' : "#1f1f1f75",
         }}
         onClick={() => {
           setTagNow("Videos");
@@ -39,6 +46,7 @@ export default function SearchTags(props) {
       <div
         style={{
           backgroundColor: TagNow === "Live" && "dodgerblue",
+          color: TagNow === "Live" ? 'white' : "#1f1f1f75",
         }}
         onClick={() => {
           setTagNow("Live");
@@ -49,6 +57,7 @@ export default function SearchTags(props) {
       <div
         style={{
           backgroundColor: TagNow === "Grops" && "dodgerblue",
+          color: TagNow === "Grops" ? 'white' : "#1f1f1f75",
         }}
         onClick={() => {
           setTagNow("Grops");
@@ -59,6 +68,7 @@ export default function SearchTags(props) {
       <div
         style={{
           backgroundColor: TagNow === "loaction" && "dodgerblue",
+          color: TagNow === "loaction" ? 'white' : "#1f1f1f75",
         }}
         onClick={() => {
           setTagNow("loaction");

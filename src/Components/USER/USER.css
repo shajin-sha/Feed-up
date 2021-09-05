@@ -4,207 +4,40 @@
     height: max-content;
     top:0%;
     left: 0%;
-    background: transparent;
+    background: #ffff;
 }
 
-.USER .USERContent{
-    position:absolute;
-    top: 13%;
-    height: 87%;
-    width: 100%;
-    animation-duration: 340ms;
-    animation-name: USERContent;
+.MenuUSER{
+  position:absolute;
+  right:7%;
+  top:35%;
+  width: 2rem;
+  border: none;
+  outline: none;
+  background:transparent;
 }
 
-
-@keyframes USERContent{
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1);
-    }
+.MenuUSER > img {
+  width: 2.6em;
 }
 
 
 
-.userimg{
-    position:relative;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 50% !important;
-}
-
-
-.userINFO{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.addIMG{
-    position: absolute;
-    right: 3%;
-    bottom: 3%;
-    width: 1.6em !important;
-    height: 1.6rem !important;
-    background: rgba(78, 73, 73, 0.212);
-    border-radius: 50%;
-    padding: 1.5%;
-    cursor:pointer;
-    margin-bottom: 2%;
-}
-
-.addIMG:active{
-    background: rgba(7, 6, 6, 0.397);
-}
-
-
-
-.USERIMGANDEDIT{
-    position: relative;
-    left: 0%;
-    top:96px;
-    width: 100%;
-    height: 100%;
-    z-index: 1000 !important;
-    background: transparent;
-    /* background-image: url("http://localhost:3000/uploads/images/1624977399607undraw_welcoming_xvuq.svg"); */
-    /* background-image: url(https://backdrops.io/images/screens/screen5.jpg); */
-    background-size: cover;
-    /* background: red; */
-}
-
-.USERIMGANDEDIT .fade{
-    position:absolute;
-    width: 100%;
-    /* background: radial-gradient(rgba(32, 30, 30, 0.37),rgba(255, 255, 255, 0.103)); */
-    height: 100%;
-  
-}
-
-
-
-.imgdiv{
-    /* width: 0%;
-    position:relative;
-    left:0;
-    right: 0;
-    height: 0%;
-    bottom: 0; */
-
-    position: relative;
-    /* background: red; */
-    /* width: min-content; */
-    left:0;
-    right: 0;
-    bottom: 0;
-    top:-150px;
-    margin: auto;
-
-}
-
-
-.userNAME{
-position:relative;
-left:3%;
-max-width: 40%;
-font-size: 3rem;
-font-weight: 900;
-text-align: left;
-color: #2b2929;
-}
-
-
-.bio{
-position:relative;
-left:3%;
-top:30%;
-margin-top: 2%;
-max-width: 40%;
-font-size: 1rem;
-font-weight: 100;
-text-align: left;
-z-index: 1000000;
-color: #292828;
-
-}
-
-
-
-
-
-.folANDflos{
-    position:relative;
-    width: 41%;
-    left:-3%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    z-index: 1000000;
-
-
-}
-
-.folANDflos div{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: rgba(18, 89, 221, 0.904);
-    width: 30%;
-    margin-left: 2%;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 1rem;
-    height: 45px;
-    cursor: pointer;
-    margin-top: 2%;
-}
-
-
-
-
-
-
-
-#likedFeeds{
-    background: rgb(192, 191, 191);
-    color:black;
-    font-weight: 900;
-}
-#likedFeeds:active{
-    background: rgb(226, 226, 226);
-}
-
-
-
-
-
-
-
-.tabs{
-    top:90px;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    z-index: 1200000;
-    height: 40px;
-
-}
-
-.tabs button{
-    width: 100%;
-    font-size: 1.2rem;
-    border-bottom: 1px solid rgba(131, 123, 123, 0.096);
-    border-top: none;
-    border-left: none;
-    border-right:  none;
-    cursor:pointer;
-    height: 100%;
-
+.closeBtnOPENUSER{
+  position:fixed;
+  background:rgb(161, 161, 161);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1rem;
+  height:1rem;
+  color: #fff;
+  left: 2%;
+  padding: 5.5%;
+  top:1.9%;
+  z-index: 10000000000;
+  border: none;
 }
 
 
@@ -226,58 +59,223 @@ a {
 
 @media (min-width:245px) and (max-width:600px){
     
-    .userNAME{
-        font-size: 2rem;   
-    }
+  .USERHeder{
+    position: relative;
+    width: 88%;
+    left:0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top:90px;
     
-    
-    .userimg{
-        position:absolute;
-        width: 8rem;
-        height: 8rem;
-        right: 3%;
-    }
-    .USERIMGANDEDIT{
-        padding-bottom: 10%;
-    }   
-    
+
+  }
 
 
 
-    .folANDflos{
-        top:0px;
-        width: 60%;
-        left:0%;
-    
-    }
-
-    .folANDflos div{
-        width: 190px;
-        /* margin-left: %; */
-        font-size: 0.8rem;
-        height: 38px;
-    }
 
 
+  .USERHeder .follower >h1{
+    margin: 0%;
+    font-weight: 900;
+  }
+
+  .USERHeder .follower >p{
+    margin: 0%;
+    color: rgba(0, 0, 0, 0.411);
+  }
+  .USERHeder .following >h1{
+    margin: 0%;
+    font-weight: 900;
+  }
+
+  .USERHeder .following >p{
+    margin: 0%;
+    color: rgba(0, 0, 0, 0.411);
     
-    #likedFeeds{
-        font-weight: 900;
-        width: 190px;
-        }
-    #likedFeeds:active{
-        background: rgb(216, 214, 214);
-    }
+  }
+
+  .USERHeder .prfilePhoto{
+    position: relative;
+    height: auto;
+    top:20px;
+    border-radius: 25px;
+    width: 8rem;
+    height: 9rem;
+    background-size:cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(95, 36, 85, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+  }
+
+
+
+  .UserINFO{
+    width: 100%;
+    position:relative;
+    top:105px;
+    text-align: center;
+  }
+  .UserINFO > h3{
+    position: relative;
+    left:0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.6rem;
+    max-width: 75%;
+    width: 100%;
+    font-weight: 800;
+    filter:drop-shadow(10px 5px 10px rgba(0, 0, 0, 0.158));
+  }
     
+
+  .UserINFO .bio{
+    position: relative;
+    margin-top: 5px;
+    top:-20px;
+    color: rgba(77, 77, 77, 0.459);
+    font-weight: 550;
+  }
+
+  .UserINFO .location{
+      margin-top: 5px;
+      top:-26px;
+      color: #4d4d4d75;
+      font-size: 0.9rem;
+      font-weight: 800;
+      position: relative;
+      left:0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 65%;
+  }
+
+  .loactionIcon{
+    position: relative;
+    top:2.2px;
+    margin-right: 2%;
+    width: 1rem;
+  }
+
+
+  .UserAction{
+    position: relative;
+    top:90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    padding-bottom: 5.5%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.068);
+
+  }
+
+  .UserAction > button{
+    padding: 4%;
+    width: 40%;
+    border-radius: 15px;
+    outline: none;
+    border:none;
+  }
+
+  .UserAction .FollowBtn{
+    background:rgb(14, 124, 233);
+    color: #ffff;
+    font-size: 1rem;
+    font-weight: 450;
+    letter-spacing: 2px;
+  }
+  .UserAction .FollowBtn:active{
+    filter:drop-shadow(10px 5px 10px rgba(9, 77, 165, 0.158));
+  }
+  .UserAction .MessageBtn{
+    font-weight: 450;
+    letter-spacing: 2px;
+    background:rgb(255, 255, 255);
+    border: 1px solid rgba(102, 102, 102, 0.192);
+  }
+
+  .UserPostTypes{
+    position: relative;
+    width: 100%;
+    top:90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.068);
+    padding-bottom: 2%;
+  }
+
+  .UserPostTypes >button {
+    width: 2.3rem;
+    border: none;
+    outline: none;
+    background:transparent;
+    padding-top: 2%;
+  }
+
+
+  .UserPosts{
+    position: relative;
+    width: 100%;
+    margin-top: 26%;
+    height: auto;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 14px;
+
+  }
+
+  .UserPosts > img{
+    width: 93%;
+    height: auto;
+    border-radius: 17px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+
 }
 
 
-.tabs button:active{
-    background: rgb(255, 255, 255);
-}
 
+@media (prefers-color-scheme:dark){
+  .USERHeder .follower >h1{
+    color: whitesmoke;
+  }
+  .USERHeder .follower >p{
+    color: rgba(245, 245, 245, 0.678);
+  }
+  .USERHeder .following >p{
+    color: rgba(245, 245, 245, 0.678);
+  }
+  .USERHeder .following >h1{
+    color: whitesmoke;
+  }
+  .UserINFO .location{
+    color: rgba(245, 245, 245, 0.678);
+  }
 
-.tabs button{
-    font-size: 0.9rem;
+  .UserINFO .bio{
+    color: rgba(245, 245, 245, 0.842);
+  }
+
+  .UserINFO > h3{
+    color: rgba(255, 255, 255, 0.925);
+  }
+  
+
+  .USER{
+    background: rgb(32, 32, 32);
+  }
 }
 
 
@@ -285,12 +283,7 @@ a {
 
 @media (min-width:500px) and (max-width:600px){ 
 
-    .userimg{
-        position:absolute;
-        width: 10rem;
-        height: 10rem;
-        right: 3%;
-    }
+
 
 
 }
@@ -301,28 +294,11 @@ a {
 
 
 
-    .folANDflos div{
-        width: 100%;
-        margin-left: 2%;
-        border-radius: 4px;
-        color: #fff;
-        font-size: 1rem;
-        height: 45px;
-        cursor: pointer;
-        margin-top: 2%;
-    }
-
-
-    
-
-.folANDflos{
-    top:200px;
-    width: 81%;
-    left:7%;
-}
 
 
 }
+
+
 
 
 

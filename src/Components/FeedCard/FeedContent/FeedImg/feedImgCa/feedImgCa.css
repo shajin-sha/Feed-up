@@ -4,3 +4,11 @@
     margin-left: 5%;
     font-size: 0.7rem;
 }
+
+
+@media (prefers-color-scheme:dark){
+    .imgCaption{
+        color: whitesmoke;
+    }
+  }
+  

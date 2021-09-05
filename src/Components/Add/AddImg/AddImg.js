@@ -4,12 +4,19 @@ import axios from "axios";
 import send from "./send_black_24dp.svg";
 import add from "./add_circle_black_24dp.svg";
 import { FirebaseContext } from "../../../store/FirebaseContext";
+import UserAnim from "../../../Pages/userSetUp/UserAnim/UserAnim";
+import useSound from 'use-sound'
+import music from "./mixkit-positive-notification-951.wav"
 
 export default function AddImg() {
   const [File, setFile] = useState(null);
   const [Caption, setCaption] = useState("");
   const [ProgressBar,setProgressBar]=useState('')
   const { firebase } = useContext(FirebaseContext);
+  const [Respon,setRespon]=useState(false)
+  const [Percent,setPercent]=useState(false)
+
+  const [play] = useSound(music);
 
   // config date for uploading (post) data with date and time...
   const dateX = new Date();
@@ -74,6 +81,7 @@ export default function AddImg() {
               setProgressBar(Math.round(percent)+'%')
 
               if (percent === 100) {
+                setPercent(true)
                 setTimeout(() => {
                   // uploaded
                   // get the url of image
@@ -95,17 +103,29 @@ export default function AddImg() {
                       feedby: localStorage.getItem("userName"),
                     };
 
-                    axios.post(
-                      "https://social-media-app-api.herokuapp.com/img",
-                      data
-                    );
+                    axios.post("https://social-media-app-api.herokuapp.com/img",data)
+                    setRespon(false)
+
+      
                   });
                 }, 2000);
+                 setTimeout(() => {
+                      play()
+                      setRespon(true)
+
+
+                      
+                    }, 3000);
+                    setTimeout(() => {
+                        setPercent(false)
+                    }, 3600);
               }
             });
           }}
           encType="multipart/form-data"
         >
+          {Percent && <UserAnim post={true} Respon={true} />}
+
           <input
             onChange={(e) => {
               var data = e.target.files[0];
@@ -121,6 +141,7 @@ export default function AddImg() {
             {File ? null : <img src={add} alt="" />}
           </label>
           <input
+          
             onChange={(e) => {
               setCaption(e.target.value);
             }}

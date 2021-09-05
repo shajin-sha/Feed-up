@@ -1,34 +1,50 @@
 .SearchIMgase{
+    transition: all 350ms ease-in-out;
     position:absolute;
     width: 100%;
     height: 100%;
     overflow: scroll;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-gap: 8px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 14px;
+    top:13%;
+    border-radius: 30px;
+    left:0;
+    right: 0;
+    margin: auto;
+
 
 }
 
 
-
+.Trending{
+  position:absolute;
+  top:2%;
+  text-align: left;
+  margin-left: 6%;
+  width: 96%;
+  color: rgba(5, 5, 5, 0.568);
+  font-size: 2rem;
+}
 
 
 
 .SearchIMgasecolumn img {
-    width: 100%;
+    position: relative;
+    width: 93%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 17px;
+    min-height: 100px;
+    margin-left: 3%;
+    margin-right: 3%;
+  
   }
 
 
   
-@media (min-width:120px) and (max-width:560px){ 
-
-   .SearchIMgase{
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-
-   }
-
-}
+  @media (prefers-color-scheme:dark){
+    .Trending{
+      color: whitesmoke;
+    }
+  }

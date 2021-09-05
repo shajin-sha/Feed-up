@@ -1,0 +1,64 @@
+.InstallPage{
+    position:absolute;
+    width: 100%;
+    height: 100vh;
+    background:rgb(248, 227, 207);
+}
+
+.installation{
+    left:0;
+    right: 0;
+    top:10%;
+    margin: auto;
+    position:absolute;
+    z-index: 2 !important;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+
+.Feed_appInstallation{
+    position:absolute;
+    z-index: 1000000;
+    top:18%;
+    left:0;
+    right: 0;
+    margin: auto;
+    color: rgba(128, 128, 128, 0.452);
+    font-weight: 100;
+}
+.InstallPageimg{
+    z-index: 100;
+    z-index: 1;
+    position:absolute;
+    width: 80%;
+    height: auto;
+    bottom: 0%;
+}
+
+.InstallPageimg2{
+    z-index: 1;
+    position:absolute;
+    width: 80%;
+    height: auto;
+    bottom: 0%;
+    left:0%;
+}
+
+.installBtn{
+    position:absolute;
+    width: 50%;
+    height: 7%;
+    padding: 1%;
+    top:50%;
+    z-index: 2;
+    background: rgba(115, 117, 117, 0.726);
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border:none;
+    left:0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+}

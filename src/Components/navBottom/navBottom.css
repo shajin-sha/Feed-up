@@ -14,7 +14,15 @@
     border-left: 1px solid #9c9a9a21;
     border-right: 1px solid #9c9a9a21;
     backdrop-filter: blur(4px);
+    overflow: visible !important;
 }
+
+@media (prefers-color-scheme:dark){
+    .navBottom{
+        background: rgb(32, 32, 32);
+    }
+  }
+  
 
 .navBottom div{
     transition: all 125ms ease-in-out;

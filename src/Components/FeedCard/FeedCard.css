@@ -15,14 +15,18 @@
     padding-top: 1.7%;
     margin-top: 1%;
     border-radius: 20px;
-    transform: scale(0.95)
-}
-
-
-.feedCard:active{
-    transform: scale(0.8);
+    transform: scale(0.95);
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
+
+
+@media (prefers-color-scheme:dark){
+    .feedCard{
+        background: rgb(32, 32, 32);
+    }
+  }
+  
+
 
 
 

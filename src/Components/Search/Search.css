@@ -3,14 +3,11 @@
     width: 100vw;
     height: 100vh;
     background: rgb(255, 255, 255);
-    z-index: 100000000000000000000;
+    z-index: 1000000000000000;
     top:0px;
     left:0%;
     animation-name: SearchAnim;
     animation-duration: 265ms;;
-
-
-
 
 }
 
@@ -18,7 +15,7 @@
 @keyframes SearchAnim {
     0%{
         transform: scale(0);
-        top:1000px;
+        top:1000%;
         border-radius: 10px;
     }
     100%{
@@ -53,6 +50,8 @@
 }
 
 
+
+
 .SearchContentAction >button{
     position:absolute;
     right: 5%;
@@ -65,6 +64,10 @@
     padding: 1.6%;
     border-radius: 50px;
     width: 20%;
+}
+
+.SearchContentAction > button:active{
+    transform: scale(1.1);
 }
 
 
@@ -91,3 +94,36 @@
     background-color: rgb(255, 255, 255);
 
 }
+
+
+
+
+@media (prefers-color-scheme:dark){
+    .SearchContent{
+        background: rgb(32, 32, 32);
+    }
+    .SearchContentAction > input{
+        background: rgb(51, 50, 50);
+    }
+
+    .SearchContentAction > input{
+        color: whitesmoke;
+    }
+    .SrarchResl{
+        background: rgb(31, 30, 30);
+    }
+    .backSearch{
+        background: rgb(80, 80, 80);
+    }
+    .SearchContentBox{
+        background: rgb(32, 32, 32);
+    }
+    .SearchContentAction >button{
+        background: rgb(80, 80, 80);
+        color: whitesmoke;
+    }
+
+  }
+  
+
+

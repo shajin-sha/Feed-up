@@ -24,6 +24,12 @@
 }
 
 
+@media (prefers-color-scheme:dark){
+    .feedby .userName{
+        color: rgba(245, 245, 245, 0.808);
+    }
+}
+
 .date{
     position:absolute;
     text-align: left;

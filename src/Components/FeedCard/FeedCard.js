@@ -63,7 +63,7 @@ export default function FeedCard(props) {
         return (
           <div style={{
             display:props.dis ? props.dis :'block',
-            // visibility:'hidden'
+            paddingBottom:Card.length-1 === index ? "100%" :"8%"
           }} key={index} className={props.hidden ? "feedCardH" : "feedCard"}>
             <Feedby
               dp={obj.feedUserDp}

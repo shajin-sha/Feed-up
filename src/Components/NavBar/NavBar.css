@@ -17,6 +17,7 @@
     margin-left: 2%;
     color: #147EFB;
     font-size: 2.2rem;
+    z-index: 1000000000000000 !important;
 }
 
 .addIcon{
@@ -124,6 +125,7 @@
 
 
 
+
 @media (min-width:120px) and (max-width:995px){ 
 
     .UserDIVMY{
@@ -148,6 +150,14 @@
         border-bottom-right-radius:5px;
     }
 
+    
+@media (prefers-color-scheme:dark){
+    .navBar{
+      background: #141418;
+    }
+  }
+  
+
     .navBarNew{
         transition: all 400ms ease-in-out;
         position:fixed;
@@ -159,6 +169,16 @@
         overflow: hidden;
         background: #ffff;
     }
+
+    @media (prefers-color-scheme:dark){
+        .navBarNew{
+            background: #202020;
+            height: 80px;
+        }
+      }
+      
+
+
 
     .HelloUser{
         width: 100%;
@@ -188,9 +208,9 @@
     }
     .navBarDp{
         position:absolute;
-        width: 3.5rem;
+        width: 4rem;
         border-radius: 50%;
-        height: 3.5rem;
+        height: 4rem;
         bottom:45%;
         right: 5%;
     }

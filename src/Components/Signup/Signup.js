@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Signup.css";
 import setting from "./setting.svg";
+import Loader from 'react-loader-spinner'
 import { useHistory } from "react-router-dom";
 
 export default function Signin() {
@@ -11,6 +12,47 @@ export default function Signin() {
   const [Password, setPassword] = useState("");
   const [Email, setEmail] = useState("");
   const [Err, setErr] = useState(false);
+  const [IsRedey, setIsRedey] = useState(false);
+  const [Lording,setLording]=useState(false);
+  
+
+  useEffect(() => {
+    document.onkeydown = function (e) {
+      if (e.keyCode === 13) {
+        // The Enter/Return key
+        if (IsRedey === true) {
+          var data = [
+            {
+              userName: UserName,
+              password: Password,
+              email: Email,
+              profileUpdated: false,
+            },
+          ];
+
+          axios
+            .post("https://social-media-app-api.herokuapp.com/users", data)
+            .then((res) => {
+              if (res.data.err) {
+                setErr(true);
+                setErrText(res.data.err);
+              } else {
+                history.push("/user/signin");
+              }
+            });
+        }
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (UserName.length < 4 || Email.length < 5 || Password.length < 5) {
+      setIsRedey(false);
+    } else {
+      setIsRedey(true);
+    }
+  }, [UserName, Password, Email]);
+
   return (
     <div>
       <div className="Si">
@@ -28,6 +70,26 @@ export default function Signin() {
         </div>
 
         <input
+          onBlur={() => {
+            // as no user cliked
+            let viewport = document.querySelector("meta[name=viewport]");
+            viewport.setAttribute(
+              "content",
+              "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            );
+          }}
+          onFocus={() => {
+            document.documentElement.style.setProperty("overflow-x", "auto");
+            // as user cliked input
+            const metaViewport = document.querySelector("meta[name=viewport]");
+            metaViewport.setAttribute(
+              "content",
+              "height=" +
+                window.innerHeight +
+                "px, width=device-width, initial-scale=1.0",
+              "user-scalable=0"
+            );
+          }}
           onChange={(e) => {
             setUserName(e.target.value);
             setErr(false);
@@ -37,7 +99,26 @@ export default function Signin() {
           id="UserName"
           required
         />
-        <input
+        <input    onBlur={() => {
+            // as no user cliked
+            let viewport = document.querySelector("meta[name=viewport]");
+            viewport.setAttribute(
+              "content",
+              "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            );
+          }}
+          onFocus={() => {
+            document.documentElement.style.setProperty("overflow-x", "auto");
+            // as user cliked input
+            const metaViewport = document.querySelector("meta[name=viewport]");
+            metaViewport.setAttribute(
+              "content",
+              "height=" +
+                window.innerHeight +
+                "px, width=device-width, initial-scale=1.0",
+              "user-scalable=0"
+            );
+          }}
           onChange={(e) => {
             setEmail(e.target.value);
           }}
@@ -46,7 +127,26 @@ export default function Signin() {
           id="email"
           required
         />
-        <input
+        <input    onBlur={() => {
+            // as no user cliked
+            let viewport = document.querySelector("meta[name=viewport]");
+            viewport.setAttribute(
+              "content",
+              "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            );
+          }}
+          onFocus={() => {
+            document.documentElement.style.setProperty("overflow-x", "auto");
+            // as user cliked input
+            const metaViewport = document.querySelector("meta[name=viewport]");
+            metaViewport.setAttribute(
+              "content",
+              "height=" +
+                window.innerHeight +
+                "px, width=device-width, initial-scale=1.0",
+              "user-scalable=0"
+            );
+          }}
           onChange={(e) => {
             setPassword(e.target.value);
             setErr(false);
@@ -56,32 +156,44 @@ export default function Signin() {
           id="Password"
           required
         />
-        <button
-          onClick={() => {
-            var data = [
-              {
-                userName: UserName,
-                password: Password,
-                email: Email,
-                profileUpdated: false,
-              },
-            ];
+        {IsRedey && (
+          <button
+            onClick={() => {
+              setLording(true)
+              var data = [
+                {
+                  userName: UserName,
+                  password: Password,
+                  email: Email,
+                  profileUpdated: false,
+                  follows:[]
+                },
+              ];
 
-            axios
-              .post("https://social-media-app-api.herokuapp.com/users", data)
-              .then((res) => {
-                if (res.data.err) {
-                  setErr(true);
-                  setErrText(res.data.err);
-                } else {
-                  history.push("/user/signin");
-                }
-              });
-          }}
-          type="submit"
-        >
-          CREATE ACCOUNT
-        </button>
+              axios
+                .post("https://social-media-app-api.herokuapp.com/users", data)
+                .then((res) => {
+                  if (res.data.err) {
+                    setErr(true);
+                    setErrText(res.data.err);
+                    setLording(false)
+                  } else {
+                    history.push("/user/signin");
+                  }
+                });
+            }}
+            type="submit"
+          >
+            {Lording == false && "CREATE ACCOUNT"}
+                    {Lording && <Loader
+                     type="TailSpin"
+                     color="#00BFFF"
+                     height={15}
+                     width={15}
+                     timeout={30000}
+                    />}
+          </button>
+        )}
 
         <p className="AlreadyHave">
           Already have a account ?

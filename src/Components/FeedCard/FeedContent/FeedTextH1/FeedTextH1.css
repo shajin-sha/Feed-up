@@ -13,3 +13,10 @@
 }
 
  
+
+@media (prefers-color-scheme:dark){
+    .feedTextH1{
+        color: whitesmoke;
+    }
+  }
+  

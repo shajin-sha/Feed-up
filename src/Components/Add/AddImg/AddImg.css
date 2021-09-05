@@ -1,7 +1,7 @@
 .img {
   top: 29%;
   position: absolute;
-  background: rgb(230, 229, 229);
+  background: rgb(255, 255, 255);
   width: 100%;
   height: 71%;
   background-repeat: no-repeat;
@@ -34,9 +34,11 @@
   box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.089);
 }
 
+
+
 .postimgbnt {
   position: absolute;
-  background: rgb(190, 188, 188);
+  background: rgb(216, 214, 214);
   padding: 1%;
   width: 3rem;
   height: 3rem;
@@ -69,7 +71,7 @@
 .submitBnt {
   position: absolute;
   border: none;
-  background: rgba(58, 58, 58, 0.89);
+  background: rgba(184, 182, 182, 0.89);
   padding: 1%;
   width: 4rem;
   height: 4rem;
@@ -131,8 +133,19 @@
 
 @media (min-width: 150px) and (max-width: 750px) {
 .upLoadBar{
-    bottom: 10.5%;
-    height: 0.7%;
+    bottom: 12%;
+    height: 1%;
 }
   
+}
+
+
+  
+@media (prefers-color-scheme:dark){
+  .img {
+    background: rgb(32, 32, 32);
+  }
+  .img .from {
+    background: rgb(32, 32, 32);
+  }
 }

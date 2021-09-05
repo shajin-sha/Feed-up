@@ -9,10 +9,12 @@ import { useHistory } from "react-router-dom";
 import { FirebaseContext } from "../../store/FirebaseContext";
 import UserAnim from "./UserAnim/UserAnim";
 import MaBox from "../../Components/MaBox/MaBox";
-
+import useSound from 'use-sound'
 import axios from "axios";
+import music from "./mixkit-positive-notification-951.wav"
 
 export default function UserSetUp() {
+  const [play] = useSound(music);
   const history = useHistory();
   const [Next, setNext] = useState(0);
   const { firebase } = useContext(FirebaseContext);
@@ -137,8 +139,6 @@ export default function UserSetUp() {
                 .then(({ ref }) => {
                   // image uploaded
                   ref.getDownloadURL().then((url) => {
-                    console.log(url);
-
                     // data for out servr
                     // url of the file have to send to backend
 
@@ -158,11 +158,10 @@ export default function UserSetUp() {
                       )
                       .then((res) => {
                         if (res.data.dp) {
-                          JSON.stringify(
-                            localStorage.setItem("dp", res.data.dp)
-                          );
+                          JSON.stringify(localStorage.setItem("dp", res.data.dp))
+                          JSON.stringify(localStorage.setItem("bio",res.data.Bio))
+                          play()
                           setRespon(true);
-
                           setTimeout(() => {
                             history.push("/home");
                           }, 2000);

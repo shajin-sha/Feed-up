@@ -1,0 +1,15 @@
+.HomeOffline{
+    z-index: 10000 !important;
+}
+
+.HomeOffline > img{
+    z-index: 10000 !important;
+    position:absolute;
+    width:19rem;
+    bottom: 3%;
+    left:0;
+    right: 0;
+    margin: auto;
+    height: 19rem;
+
+}

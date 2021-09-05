@@ -8,6 +8,9 @@ import FullVideo from "../../Components/FullVideo/FullVideo";
 import Comments from "../../Components/Comments/Comments";
 import { useHistory } from "react-router-dom";
 import Search from "../../Components/Search/Search";
+import HomeOffline from "../../Components/Offline/HomeOffline";
+import axios from "axios";
+
 
 
 export default function Home() {
@@ -21,6 +24,9 @@ export default function Home() {
   const [Data, setData] = useState([]);
   const [HideHav, setHideNav] = useState(false);
   const [IsSearch,setIsSearch]=useState(false)
+  const [ShowappIcon,setShowappIcon]=useState(false)
+  const [HideBottomNav,setHideBottomNav]=useState(false)
+  const [UserInfo,setUserInfo]=useState({})
   let history = useHistory();
 
   useEffect(() => {
@@ -43,10 +49,33 @@ export default function Home() {
     } else if (user === "null") {
       history.push("/welcome");
     }
+
+
+
+    axios.post("https://social-media-app-api.herokuapp.com/getusers",{'query':localStorage.getItem("userName")}).then((res)=>{
+      console.log(res.data[0])
+      setUserInfo(res.data[0])
+  })
+
+
+
+
+
+
   }, []);
 
   function openAdd() {
+    
+    if(window.matchMedia("(prefers-color-scheme:dark)").matches){
+      document.getElementById("theme-color").setAttribute("content", "#202020",'theme-color',);
+    }
+    else{
+      document.getElementById("theme-color").setAttribute("content", "#ffffff",'theme-color',);
+    }
+
+    setHideBottomNav(false)
     setHideNav(true);
+    setShowappIcon(true)
 
     if (IsUser === true) {
       setIsUser(false);
@@ -61,7 +90,16 @@ export default function Home() {
   }
 
   function openUSER() {
+    
+    if(window.matchMedia("(prefers-color-scheme:dark)").matches){
+      document.getElementById("theme-color").setAttribute("content", "#202020",'theme-color',);
+    }
+    else{
+      document.getElementById("theme-color").setAttribute("content", "#ffffff",'theme-color',);
+    }
+    setHideBottomNav(false)
     setHideNav(true);
+    setShowappIcon(true)
     if (IsADD === true) {
       setIsADD(false);
     }
@@ -75,7 +113,15 @@ export default function Home() {
   }
 
   function Home() {
+    if(window.matchMedia("(prefers-color-scheme:dark)").matches){
+      document.getElementById("theme-color").setAttribute("content", "#202020",'theme-color',);
+    }
+    else{
+      document.getElementById("theme-color").setAttribute("content", "#ffffff",'theme-color',);
+    }
+    setShowappIcon(false)
     setHideNav(false);
+    setHideBottomNav(false)
 
     if (IsUser === true) {
       setIsUser(false);
@@ -100,6 +146,12 @@ export default function Home() {
 
 
   function openSearch(){
+    if(window.matchMedia("(prefers-color-scheme:dark)").matches){
+      document.getElementById("theme-color").setAttribute("content", "#202020",'theme-color',);
+    }
+    else{
+      document.getElementById("theme-color").setAttribute("content", "#ffffff",'theme-color',);
+    }
     setIsSearch(true)
   }
 
@@ -118,40 +170,53 @@ export default function Home() {
     }
   }
 
+
+  function hideNavBar(data){
+    setHideBottomNav(data)
+  }
+  
+
+
+
+
   return (
     <div>
-      <NavBar openSearch={openSearch} HideHav={HideHav} openUSER={openUSER} openAdd={openAdd} />
+      <NavBar showappIcon={ShowappIcon} openSearch={openSearch} HideHav={HideHav} openUSER={openUSER} openAdd={openAdd} />
 
-      { IsSearch && <Search closeSerch={closeSerch} />}
-
-
+      { IsSearch && <Search closeNavBar={hideNavBar} closeSerch={closeSerch} />}
 
 
-      {/* {IsUser === true
-        ? null
-        : IsADD === false && (
-            <FeedCard
-              openComment={openComment}
-              hidden={IsFullVideo ? "hidden" : null}
-              openFullVideo={openFullVideo}
-            />
-          )} */}
-
-
-
-
+      { window.navigator.onLine ? null : <HomeOffline/>}
 
 
       {IsADD && <Add />}
 
-      <FeedCard
+
+
+
+    {window.navigator.onLine &&
+    
+    <FeedCard
         dis={IsSearch ? "none" : IsUser ? 'none' : IsADD ? 'none' : "block"}
         openComment={openComment}
         hidden={IsFullVideo ? "hidden" : null}
         openFullVideo={openFullVideo}
       />
 
-      {IsUser ? <USER /> : null}
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+      {IsUser ? <USER UserInfo={UserInfo.follows} canEdit={true} userName={UserInfo.userName} dp={UserInfo.Dp} bio={UserInfo.Bio}  /> : null}
 
       {IsFullVideo && <FullVideo close={closeV} url={Url} />}
 
@@ -163,9 +228,9 @@ export default function Home() {
         />
       )}
 
-      {Width < 600 && (
-        <NavBottom Home={Home} openAdd={openAdd} openUSER={openUSER} />
-      )}
+      {Width < 600 ? HideBottomNav === false ?  <NavBottom Home={Home} openAdd={openAdd} openUSER={openUSER} />:null:null}
+
+
     </div>
   );
 }
